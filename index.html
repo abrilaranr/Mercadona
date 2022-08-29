@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Proyecto final</title>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav d-flex justify-content-between align-items-center">
+      <!-- Columna del título -->
+      <div class="col">
+        <span class="logo"> menut </span>
+      </div>
+      <!-- Columna de los botones -->
+      <div class="col d-flex justify-content-center flex-row">
+        <a href="#" class="text-dark">Inicio</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="#" class="text-dark">Recetas</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="#" class="text-dark">Ingredientes</a>
+      </div>
+      <!-- Columna del botón de crear recetas -->
+      <div class="col d-flex flex-row-reverse">
+        <button type="button" class="btn">Crear receta</button>
+      </div>
+    </nav>
+    <main class="d-flex flex-row">
+      <!-- Sección de la izquierda de la mitad de la pantalla -->
+      <section>
+        <!-- input de Nombre -->
+        <div class="input">
+          <label for="">Nombre de la receta</label>
+          <br />
+          <input type="text" />
+        </div>
+
+        <!-- Input de agregar ingredientes -->
+        <div class="input">
+          <label for="">Agregar ingredientes</label>
+          <br />
+          <div></div>
+          <input type="text" />
+          <p class="mt-3">
+            ¿El ingrediente que estás buscando no está?
+            <a href="#">agrega uno personalizado aquí.</a>
+          </p>
+        </div>
+
+        <!-- Input del select de categoría de la receta -->
+        <div class="input">
+          <label for="category">Categoría de la receta</label>
+          <br />
+          <select name="categorry" id="category" value="reposteria">
+            <option value="reposteria">Repostería</option>
+            <option value="carnes">Carnes</option>
+            <option value="ensaladas">Ensaladas</option>
+            <option value="pescados">PeSSscados</option>
+            <option value="sopas y cremas">Sopas y cremas</option>
+            <option value="salsas">Salsas</option>
+          </select>
+        </div>
+
+        <!-- Tabla de nutrientes -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Ingrediente</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Kcal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">
+                <img
+                  onclick="deleteIngredient('Leche condensada', this)"
+                  src="icons/close-line.svg"
+                  alt=""
+                />
+              </td>
+              <td
+                scope="row"
+                onload="getIngredientInfo('Leche condensada', this)"
+              >
+                Leche condensada
+              </td>
+              <td>
+                <div class="input-table">
+                  <input
+                    type="number"
+                    onchange="calcIngredientKcal('Leche condensada', this)"
+                  />
+                  <label
+                    for=""
+                    onload="getIngredientMeasure('Leche condensada', this)"
+                    >gr</label
+                  >
+                </div>
+              </td>
+              <td id="" onload="setIngredientId('Leche condensada', this)">
+                726
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Segunda sección de la derecha de la otra mitad de la pantalla -->
+      <section class="d-flex flex-column justify-content-between">
+        <article class="text-center">
+          <span class="text-lg">tu receta tiene</span><br />
+          <span class="text-xl font-weight-bold" id="recipeKcalOutput"
+            >1234 kcal</span
+          ><br />
+          <span class="text-lg">y hacerla te costará</span><br />
+          <span class="text-xl font-weight-bold" id="recipePriceOutput"
+            >2,23€</span
+          >
+        </article>
+        <p>
+          Estos datos son aproximados ya pueden variar mucho según la cocción de
+          la receta, por lo que se calculan en crudo
+        </p>
+        <article>
+          <ul>
+            <li>Grasas</li>
+            <li>De las cuales saturadas</li>
+            <li>Carbohidratos</li>
+            <li>De los cuales azúcares</li>
+            <li>Fibra</li>
+            <li>Proteínas</li>
+            <li>Fibra</li>
+            <li>Sal</li>
+          </ul>
+        </article>
+        <!-- botones de guardar o eliminar -->
+        <article class="d-flex justify-content-between">
+          <button type="button" class="btn" onclick="deleteRecipe()">
+            Eliminar
+          </button>
+          <button type="button" class="btn" onclick="saveRecipe()">
+            Guardar
+          </button>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+// Esto cambia los colores de default del bootstrap a nuestra paleta de colores haciendolos personalizados
+
+$primary: #118AB2;
+$secondary: #6c757d;
+$success: #72ECA6;
+$info: #0dcaf0;
+$warning: #FFD166;
+$danger: #EF476F;
+$light: #f8f9fa;
+$dark: #212529;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+// Este font es solo para el logo, nos e utilizará para nada más
+@font-face {
+    font-family: galada;
+    src: url(fonts/Galada-Regular.ttf);
+}
+
+*{
+    color: #073B4C;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #06D6A0;
+}
+
+a:hover{
+    transition: 0.2s;
+    color: #38A3A5;
+}
+
+// Esto simplemente cambia el color del fondo cuando seleccionas texto (tontería)
+::selection {
+    background: #C7F9CC;
+}
+
+// Esto es para quitar las flechitas que tiene el input type number que arruina el diseño y no son útiles
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+// Estos son los 5 tamaños utilizados en fonts, pues me inventé estas clases para definir los tamaños
+.text-xs{
+    height: 1rem;
+    font-size: 0.75rem;
+}
+
+.text-sm{
+    height: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.text-md{
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+.text-lg{
+    height: 2rem;
+    font-size: 1.5rem;
+}
+
+.text-xl{
+    height: 3rem;
+    font-size: 2.25rem;
+}
+
+// Este no está en nuestro bootstrap? Pues lo agrego manualmente, no entiendo por qué no nos aparece
+.font-weight-bold{
+    font-weight: bold;
+}
+
+
+
+// Esto solo se utiliza para que el logo quede bonito
+.logo{
+    font-family: galada;
+    overflow: hidden;
+    height: 4rem;
+    font-size: 2.75rem;
+    font-weight: none;
+}
+
+.nav{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 4rem;
+    background-color: #72ECA6;
+}
+
+section{
+    width: 50vw;
+    height: calc(100vh - 4rem);
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: #fff;
+}
+
+// Cada vez que exista un section el primero será de color gris clarito esto para dividir la pantalla en 2
+section:first-of-type{
+    background-color: #F6F8F9;
+}
+
+// Input se refiere a cualquier tipo de input que sean tipo text o select
+.input{
+    margin-bottom: 2rem;
+}
+
+// Estilo del título que tiene arriba cada input en el casod e que lo tenga
+.input > label{
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+}
+
+// Estilo de la caja del input
+.input > input, select{
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.162);
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+}
+
+.input > input:hover, select:hover{
+    transition: 0.2s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.input-table > input:hover{
+    
+}
+
+// Estilo de input que se encuentra dentro de una tabla, son más pequeeños y tienen otro formato
+.input-table{
+
+}
+
+.input-table > label{
+
+}
+
+.input-table > input{
+    text-align: center;
+    background-color: #F6F8F9;
+    border: none;
+    width: 4rem;
+    border-radius: 0.5rem;
+}
+
+.btn{
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.162);
+    background-color: #F6F8F9;
+    font-weight: bold;
+}
+
+table{
+    background-color: #fff;
+    border-radius: 1rem;
+}

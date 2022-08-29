@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<!-- Esto es para hacer gráficos con JavaScript, no sé como funciona ero funciona,
+habría que mirarlo bien si queremos agretgar esto a la página -->
+
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Grasas", "Grasas saturadas", "Carbohidratos", "Carbohidratos de los cuales azúcares", "Fibra", "Proteínas", "Sal"];
+var yValues = [55, 49, 44, 24, 15, 13, 134];
+var barColors = [
+  "#D9ED92",
+  "#B5E48C",
+  "#99D98C",
+  "#76C893",
+  "#52B69A",
+  "#34A0A4",
+  "#168AAD",
+  "#1A759F",
+];
+
+new Chart("myChart",{
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "tabla nutricional"
+    }
+  }
+});
+
+
+</script>
+
+</body>
+</html>
