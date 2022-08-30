@@ -9,6 +9,13 @@ $danger: #EF476F;
 $light: #f8f9fa;
 $dark: #212529;
 
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 
 // Este font es solo para el logo, nos e utilizará para nada más
@@ -175,4 +182,10 @@ aside{
     padding-right: 2rem;
     padding-left: 2rem;
     background-color: F6F8F9;
+}
+
+
+.card{
+    width: 280px;
+
 }
