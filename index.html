@@ -28,92 +28,75 @@
         <button type="button" class="btn">Crear receta</button>
       </div>
     </nav>
+
     <main class="d-flex flex-row">
       <!-- Sección de la izquierda de la mitad de la pantalla -->
-      <section>
-        <!-- input de Nombre -->
+      <aside>
         <div class="input">
-          <label for="">Nombre de la receta</label>
+          <label for="category">Ordenar por</label>
           <br />
-          <input type="text" />
-        </div>
-
-        <!-- Input de agregar ingredientes -->
-        <div class="input">
-          <label for="">Agregar ingredientes</label>
-          <br />
-          <div></div>
-          <input type="text" />
-          <p class="mt-3">
-            ¿El ingrediente que estás buscando no está?
-            <a href="#">agrega uno personalizado aquí.</a>
-          </p>
-        </div>
-
-        <!-- Input del select de categoría de la receta -->
-        <div class="input">
-          <label for="category">Categoría de la receta</label>
-          <br />
-          <select name="categorry" id="category" value="reposteria">
-            <option value="reposteria">Repostería</option>
-            <option value="carnes">Carnes</option>
-            <option value="ensaladas">Ensaladas</option>
-            <option value="pescados">PeSSscados</option>
-            <option value="sopas y cremas">Sopas y cremas</option>
-            <option value="salsas">Salsas</option>
+          <select name="category" id="category">
+            <option value="precio_menor_a_mayor">menor a mayor precio</option>
+            <option value="precio_mayor_a_menor">mayor a menor precio</option>
+            <option value="kcal_menor_a_mayor">menor a mayor precio</option>
+            <option value="kcal_mayor_a_menor">mayor a menor precio</option>
           </select>
         </div>
+        <!-- input de alergenos -->
+        <div class="input">
+          <label for="">Alérgenos</label>
+          <br />
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sin-gluten">
+              <label class="form-check-label" for="firstCheckbox">Sin gluten</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sin-lactosa">
+              <label class="form-check-label" for="secondCheckbox">Sin lactosa</label>
+            </li>
+          </ul>
+        </div>
 
-        <!-- Tabla de nutrientes -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col">Ingrediente</th>
-              <th scope="col">Cantidad</th>
-              <th scope="col">Kcal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row">
-                <img
-                  onclick="deleteIngredient('Leche condensada', this)"
-                  src="icons/close-line.svg"
-                  alt=""
-                />
-              </td>
-              <td
-                scope="row"
-                onload="getIngredientInfo('Leche condensada', this)"
-              >
-                Leche condensada
-              </td>
-              <td>
-                <div class="input-table">
-                  <input
-                    type="number"
-                    onchange="calcIngredientKcal('Leche condensada', this)"
-                  />
-                  <label
-                    for=""
-                    onload="getIngredientMeasure('Leche condensada', this)"
-                    >gr</label
-                  >
-                </div>
-              </td>
-              <td id="" onload="setIngredientId('Leche condensada', this)">
-                726
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <!--Seleccionar categorías de la receta -->
+        <div class="input">
+          <label for="">Categorías</label>
+          <br />
+          <ul class="list-group" aria-label="type_recipe">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="reposteria">
+              <label class="form-check-label" for="reposteria">Repostería</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="carnes">
+              <label class="form-check-label" for="carnes">Carnes</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="ensaladas">
+              <label class="form-check-label" for="thirdCheckbox">Ensaladas</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="pescados">
+              <label class="form-check-label" for="secondCheckbox">Pescados</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sopas_y_cremas">
+              <label class="form-check-label" for="secondCheckbox">Sopas y Cremas</label>
+            </li>
+             <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="salsas">
+              <label class="form-check-label" for="secondCheckbox">Salsas</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="pasta">
+              <label class="form-check-label" for="secondCheckbox">Pasta</label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+     
       <!-- Segunda sección de la derecha de la otra mitad de la pantalla -->
       <section class="d-flex flex-column justify-content-between">
-        <article class="text-center">
-        </article>
-        
         <article>
           <ul>
             

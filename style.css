@@ -9961,7 +9961,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 section {
-  width: 50vw;
+  width: calc(100vw - 240px);
   height: calc(100vh - 4rem);
   padding-top: 2rem;
   padding-right: 2rem;
@@ -10012,4 +10012,13 @@ section:first-of-type {
 table {
   background-color: #fff;
   border-radius: 1rem;
+}
+
+aside {
+  width: 240px;
+  height: calc(100vh - 4rem);
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  background-color: F6F8F9;
 }/*# sourceMappingURL=style.css.map */
