@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Proyecto final</title>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav d-flex justify-content-between align-items-center">
+      <!-- Columna del título -->
+      <div class="col">
+        <span class="logo"> menut </span>
+      </div>
+      <!-- Columna de los botones -->
+      <div class="col d-flex justify-content-center flex-row">
+        <a href="#" class="text-dark">Información adicional</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="#" class="text-dark">Recetas</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="#" class="text-dark">Ingredientes</a>
+      </div>
+      <!-- Columna del botón de crear recetas -->
+      <div class="col d-flex flex-row-reverse">
+        <button type="button" class="btn">Crear receta</button>
+      </div>
+    </nav>
+
+    <main class="d-flex flex-row">
+      <!-- Sección de la izquierda de la mitad de la pantalla -->
+      <aside>
+        <div class="input">
+          <label for="category">Ordenar por</label>
+          <br />
+          <select name="category" id="category">
+            <option value="precio_menor_a_mayor">menor a mayor precio</option>
+            <option value="precio_mayor_a_menor">mayor a menor precio</option>
+            <option value="kcal_menor_a_mayor">menor a mayor precio</option>
+            <option value="kcal_mayor_a_menor">mayor a menor precio</option>
+          </select>
+        </div>
+        <!-- input de alergenos -->
+        <div class="input">
+          <label for="">Alérgenos</label>
+          <br />
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sin-gluten">
+              <label class="form-check-label" for="firstCheckbox">Sin gluten</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sin-lactosa">
+              <label class="form-check-label" for="secondCheckbox">Sin lactosa</label>
+            </li>
+          </ul>
+        </div>
+
+        <!--Seleccionar categorías de la receta -->
+        <div class="input">
+          <label for="">Categorías</label>
+          <br />
+          <ul class="list-group" aria-label="type_recipe">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="reposteria">
+              <label class="form-check-label" for="reposteria">Repostería</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="carnes">
+              <label class="form-check-label" for="carnes">Carnes</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="ensaladas">
+              <label class="form-check-label" for="thirdCheckbox">Ensaladas</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="pescados">
+              <label class="form-check-label" for="secondCheckbox">Pescados</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="sopas_y_cremas">
+              <label class="form-check-label" for="secondCheckbox">Sopas y Cremas</label>
+            </li>
+             <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="salsas">
+              <label class="form-check-label" for="secondCheckbox">Salsas</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="pasta">
+              <label class="form-check-label" for="secondCheckbox">Pasta</label>
+            </li>
+          </ul>
+        </div>
+        <div class="input">
+          <label class=""> Precio </label>
+          <div class="row g-2">
+            <div class="col-min">
+              <div class="form-floating">
+                <input type="minPrice" class="form-control" id="minPrice" placeholder="min" value="0">
+                <label for="minPrice">Min</label>
+              </div>
+              <div class="form-floating">
+                  <input type="maxPrice" class="form-control" id="maxPrice" placeholder="max" value="0">
+                  <label for="maxPrice">Max</label>
+                </div>
+            </div>
+            <div class="col-min">
+                
+            </div>
+              
+          </div>
+
+        </div>
+        
+      </aside>
+     
+      <!-- Sección de las recetas -->
+      <section class="d-flex flex-column justify-content-between">
+        <article>
+          <div class="container-fluid text-center">
+            <div class="row d-flex justify-content-center">
+              <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="recipe-title">Card title</h5>
+                      <p class="card-text">Pequeña descripción de la receta</p>
+                      <label class="btn btn-primary">Kcal</label>
+                      <label class="btn btn-primary">Precio</label>
+                    </div>
+                  </div>
+              </div>
+              <div class="col">
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="recipe-title">Card title</h5>
+                      <p class="card-text">Pequeña descripción de la receta</p>
+                      <label class="btn btn-primary">Kcal</label>
+                      <label class="btn btn-primary">Precio</label>
+                    </div>
+                  </div>
+                
+              <div class="col">
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="recipe-title">Card title</h5>
+                      <p class="card-text">Pequeña descripción de la receta</p>
+                      <label class="btn btn-primary">Kcal</label>
+                      <label class="btn btn-primary">Precio</label>
+                    </div>
+                  </div>
+              
+              </div>
+          </div>
+            
+          
+        </article>
+        <!-- botones de guardar o eliminar -->
+        <article class="d-flex justify-content-between">
+          <button type="button" class="btn" onclick="deleteRecipe()">
+            Eliminar
+          </button>
+          <button type="button" class="btn" onclick="saveRecipe()">
+            Guardar
+          </button>
+        </article>
+        
+      </section>
+    </main>
+  </body>
+</html>
