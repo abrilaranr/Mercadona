@@ -31,8 +31,8 @@ SELECT * FROM categories;
 -- Table `mydb`.`categories`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`recipe_category` (
-  `id_recipe_category` INT,
-  `name_recipe_category` VARCHAR(45),
+  `id_recipe_category` INT NOT NULL auto_increment UNIQUE,
+  `name_recipe_category` VARCHAR(45) UNIQUE,
   PRIMARY KEY (`id_recipe_category`));
   
 
@@ -40,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`recipe_category` (
 -- Table `mydb`.`recipes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`ingredients` (
-  `id_ingredient` INT NOT NULL AUTO_INCREMENT ,
-  `name_ingredient` VARCHAR(150),
+  `id_ingredient` INT NOT NULL AUTO_INCREMENT UNIQUE,
+  `name_ingredient` VARCHAR(150) UNIQUE,
   `peso` INT,
   `medicion` VARCHAR(3),
   `kcal` INT,
@@ -58,26 +58,29 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ingredients` (
   PRIMARY KEY (`id_ingredient`));
   
 CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
-  `id_recipe` INT NOT NULL,
-  `name_recipe` VARCHAR(45) NULL,
+  `id_recipe` INT NOT NULL UNIQUE,
+  `name_recipe` VARCHAR(45) NULL UNIQUE,
   `id_recipe_category` INT,
   FOREIGN KEY (id_recipe_category) references recipe_category (id_recipe_category),
   PRIMARY KEY (`id_recipe`));
 
 CREATE TABLE IF NOT EXISTS `mydb`.`recipes_has_ingredients` (
+  `id_recipe_general` INT,
   `recipes_id_recipe` INT NOT NULL AUTO_INCREMENT,
   `ingredients_id_ingredient` INT NOT NULL,
    `cantidad_ingredient` INT NOT NULL, 
+  FOREIGN KEY (id_recipe_general) references recipes (id_recipe),
+
   PRIMARY KEY (`recipes_id_recipe`));
 
 INSERT INTO recipe_category(id_recipe_category,name_recipe_category) VALUES
-(20, "reposteria"),
-(21, "carnes"),
-(22, "ensaladas"),
-(23, "pescados"),
-(24, "sopas_y_cremas"),
-(25, "salsas"),
-(26, "pasta");
+(1, "reposteria"),
+(null, "carnes"),
+(null, "ensaladas"),
+(null, "pescados"),
+(null, "sopas_y_cremas"),
+(null, "salsas"),
+(null, "pasta");
 
 INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, grasas, grasas_saturadas, carbohidratos, carbohidratos_azucares, fibra, proteinas, sal, precio, number_categories) VALUES 
 (1001,"Aceite de Oliva Virgen extra, Hacendado", 1000, "ml", 822, 91.0, 13.0, 0, 0, 0, 0, 0, 4.25, 1),
@@ -216,7 +219,15 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 (null,"Pan rallado Hacendado 750g", 750, "g", 368.4, 1.26, 0.3, 78.12, 3.4, 3.8, 9.58, 1.025, 0.75, 4),
 (null,"Pan rallado con ajo y perejil Hacendado 500g", 500, "g", 336, 1.7, 0.4, 71.3, 2.6, 6.8, 8.7, 1.02, 0.90, 4);
 
+INSERT INTO recipes(id_recipe,name_recipe,id_recipe_category) VALUES
+(1, "Arroz a la cubana", 26);
+
+INSERT INTO recipes_has_ingredients(id_recipe_general, recipes_id_recipe, ingredients_id_ingredient, cantidad_ingredient) VALUES
+(1, 1, 1001, 20),
+(1, null,3023, 400),
+(1, null,1045, 210);
+
 SELECT * FROM ingredients;
 SELECT * FROM recipe_category;
-SELECT * FROM recipes_has_ingredients;
+SELECT * FROM recipes_has_ingredients ORDER BY id_recipe_general;
 SELECT * FROM recipes;
