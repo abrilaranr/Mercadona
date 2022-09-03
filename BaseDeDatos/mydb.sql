@@ -58,9 +58,10 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ingredients` (
   PRIMARY KEY (`id_ingredient`));
   
 CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
-  `id_recipe` INT NOT NULL UNIQUE,
+  `id_recipe` INT NOT NULL AUTO_INCREMENT UNIQUE,
   `name_recipe` VARCHAR(45) NULL UNIQUE,
   `id_recipe_category` INT,
+  `recipe_ingredients` INT,
   FOREIGN KEY (id_recipe_category) references recipe_category (id_recipe_category),
   PRIMARY KEY (`id_recipe`));
 
@@ -214,20 +215,27 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 (null,"Pan de molde blanco Hacendado 460g", 460, "g", 249, 2.1, 0.4, 47.0, 3.9, 3.0, 9.0, 1.1, 0.85, 4),
 (null,"Pan de molde 100% integral Hacendado 460g", 460, "g", 238, 3.2, 0.7, 37.0, 3.3, 7.4, 11.0, 1.0, 0.95, 4),
 (null,"Pan de molde sin gluten blanco Hacendado 440g", 440, "g", 250, 11.0, 1.0, 28.0, 4.3, 9.5, 4.3, 1.3, 3.10, 4),
-(null,"Baguette sin gluten 175g", 175, "g", 255, 9.5, 1.0, 36.2, 2.3, 8.0, 2.20, 1.11, 2.10, 4),
 (null,"Tortillas de trigo Hacendado 360g", 360, "g", 302, 5.4, 2.6, 55.0, 2.2, 2.0, 7.3, 1.7, 1.30, 4),
 (null,"Pan rallado Hacendado 750g", 750, "g", 368.4, 1.26, 0.3, 78.12, 3.4, 3.8, 9.58, 1.025, 0.75, 4),
 (null,"Pan rallado con ajo y perejil Hacendado 500g", 500, "g", 336, 1.7, 0.4, 71.3, 2.6, 6.8, 8.7, 1.02, 0.90, 4);
 
 INSERT INTO recipes(id_recipe,name_recipe,id_recipe_category) VALUES
-(1, "Arroz a la cubana", 26);
+(1, "Arroz a la cubana", 7);
 
 INSERT INTO recipes_has_ingredients(id_recipe_general, recipes_id_recipe, ingredients_id_ingredient, cantidad_ingredient) VALUES
 (1, 1, 1001, 20),
 (1, null,3023, 400),
 (1, null,1045, 210);
 
+insert into recipes (recipe_ingredients)
+Select ingredients_id_ingredient from recipes_has_ingredients where id_recipe_general;
+
 SELECT * FROM ingredients;
 SELECT * FROM recipe_category;
 SELECT * FROM recipes_has_ingredients ORDER BY id_recipe_general;
 SELECT * FROM recipes;
+
+SELECT id_recipe_general, group_concat(DISTINCT ingredients_id_ingredient)
+from recipes_has_ingredients
+group by id_recipe_general
+ORDER BY group_concat(DISTINCT ingredients_id_ingredient) ASC;
