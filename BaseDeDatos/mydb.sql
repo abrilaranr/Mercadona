@@ -6,12 +6,12 @@ USE `mydb`;
 -- Table `mydb`.`ingredients`
 -- -----------------------------------------------------
 
-CREATE TABLE IF NOT EXISTS `mydb`.`categories` (
+CREATE TABLE IF NOT EXISTS `mydb`.`ingredient_category` (
   `id_category` INT,
   `name_category` VARCHAR(45),
   PRIMARY KEY (`id_category`));
 
-INSERT INTO categories (id_category, name_category) VALUES
+INSERT INTO ingredient_category (id_category, name_category) VALUES
 (1,"aceites_especias_salsas"),
 (2,"aperitivos"),
 (3,"arroz_legumbres_pasta"),
@@ -23,12 +23,12 @@ INSERT INTO categories (id_category, name_category) VALUES
 (9,"cereales_galletas"),
 (10,"conservas_caldos_cremas"),
 (11,"charcuteria_quesos");
-SELECT * FROM categories;
+SELECT * FROM ingredient_category;
 
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`categories`
+-- Table `mydb`.`ingredient_category`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`recipe_category` (
   `id_recipe_category` INT NOT NULL auto_increment UNIQUE,
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ingredients` (
   `sal` FLOAT,
   `precio` FLOAT,
   `number_categories` INT,
-  FOREIGN KEY (number_categories) references categories (id_category),
+  FOREIGN KEY (number_categories) references ingredient_category (id_category),
   PRIMARY KEY (`id_ingredient`));
   
 CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
@@ -65,12 +65,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
   FOREIGN KEY (id_recipe_category) references recipe_category (id_recipe_category),
   PRIMARY KEY (`id_recipe`));
 
-CREATE TABLE IF NOT EXISTS `mydb`.`recipes_has_ingredients` (
-  `id_recipe_general` INT,
-  `recipes_id_recipe` INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `mydb`.`new_recipes` (
+   `recipes_id_recipe` INT NOT NULL AUTO_INCREMENT,
+ `id_new_recipes` INT,
   `ingredients_id_ingredient` INT NOT NULL,
    `cantidad_ingredient` INT NOT NULL, 
-  FOREIGN KEY (id_recipe_general) references recipes (id_recipe),
+  FOREIGN KEY (id_new_recipes) references recipes (id_recipe),
 
   PRIMARY KEY (`recipes_id_recipe`));
 
@@ -145,20 +145,15 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 (null,"Guacamole Hacendado 95% aguacate fresco", 200, "g", 114, 4.7, 1.1, 7.7, 2.8, 4.0, 8.2, 1.0, 2.25, 1),
 (null,"Chili con carne Hacendado", 420, "g", 189.4, 17, 10.0, 4.2, 2.7, 0, 4.9, 1.6, 1.30, 1),
 (null,"Salsa romesco Ferrer", 130, "g", 423, 39, 4.6, 14.0, 4.1, 0, 3.4, 1.4, 1.80, 1),
-(null,"Pasta de sésamo Tahini Hacendado", 200, "g", 65.6, 10.1, 30.0, 3.2, 1.4, 3.4, 24.9, 0.04, 2.90, 1)
-;
-INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, grasas, grasas_saturadas, carbohidratos, carbohidratos_azucares, fibra, proteinas, sal, precio, number_categories) VALUES 
-(2001,"Aceitunas manzanilla rellenas de anchoa Hacendado 3 botes x 50g", 50, "g", 150, 15.0, 2.9, 0.9, 0.5, 0, 1.6, 2.6, 1.25, 2),
+(null,"Pasta de sésamo Tahini Hacendado", 200, "g", 65.6, 10.1, 30.0, 3.2, 1.4, 3.4, 24.9, 0.04, 2.90, 1),
+(null,"Aceitunas manzanilla rellenas de anchoa Hacendado 3 botes x 50g", 50, "g", 150, 15.0, 2.9, 0.9, 0.5, 0, 1.6, 2.6, 1.25, 2),
 (null,"Aceitunas manzanilla rellenas de anchoa Hacendado reducidas en sal 3 x 50g", 50, "g", 163, 15.6, 3.07, 0.7, 0.5, 0, 1.7, 1.9, 1.60, 2),
 (null,"Aceitunas negras Hacendado sin hueso", 150, "g", 125, 13.0, 2.2, 0, 0, 0, 0.5, 2.5, 0.90, 2),
 (null,"Pepinillos pequeños Hacendado", 250, "g", 79, 0.5, 0.2, 2.3, 0.6, 0.6, 1.3, 1.5, 1.50, 2),
 (null,"Altramuces Hacendado", 440, "g", 105, 1.7, 0.3, 9.0, 0, 3.8, 12.0, 3.5, 1.30, 2),
 (null,"Nuez natural Hacendado pelada", 200, "g", 716, 69.6, 6.0, 2.2, 1.7, 6.2, 17.0, 0, 2.60, 2),
-(null,"Almendra natural Hacendado", 200, "g", 603, 51.0, 3.9, 5.4, 5.4, 11.0, 25.0, 0, 2.45, 2)
-;
-
-INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, grasas, grasas_saturadas, carbohidratos, carbohidratos_azucares, fibra, proteinas, sal, precio, number_categories) VALUES 
-(3001,"Arroz redondo Hacendado", 1000, "g", 344, 1.0, 0.2, 75.0, 0.5, 0, 8.2, 0.01, 0.95, 3),
+(null,"Almendra natural Hacendado", 200, "g", 603, 51.0, 3.9, 5.4, 5.4, 11.0, 25.0, 0, 2.45, 2),
+(null,"Arroz redondo Hacendado", 1000, "g", 344, 1.0, 0.2, 75.0, 0.5, 0, 8.2, 0.01, 0.95, 3),
 (null,"Arroz bomba Hacendado", 1000, "g", 349, 0.9, 0.3, 77.0, 0.5, 0, 7.7, 0.01, 2.60, 3),
 (null,"Arroz largo Hacendado", 1000, "g", 345, 0.7, 0.2, 77.0, 0.5, 0, 7.2, 0.01, 0.98, 3),
 (null,"Arroz integral redondo Hacendado", 1000, "g", 347, 2.5, 0.5, 71.0, 1.2, 3.4, 8.4, 0.01, 1.50, 3),
@@ -191,10 +186,8 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 (null,"Spaghetti sin gluten con quinoa Felicia", 500, "g", 355, 2.0, 0.7, 76.0, 0.5, 2.5, 7.3, 0.01, 1.70, 3),
 (null,"Gnocchi frescos Hacendado de patata", 500, "g", 174, 0.4, 0.2, 37.6, 0.2, 0.0, 4.5, 0.87, 1.10, 3),
 (null,"Placas para canelones tradicionales Hacendado", 160, "g", 362, 1.1, 0.2, 75.0, 2.0, 4.0, 11.0, 0.01, 0.70, 3),
-(null,"Cannelloni tubos precocidos Hacendado", 250, "g", 350, 1.5, 0.3, 72.6, 3.5, 3.0, 11.5, 0.005, 1.35, 3)
-;
-INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, grasas, grasas_saturadas, carbohidratos, carbohidratos_azucares, fibra, proteinas, sal, precio, number_categories) VALUES 
-(4001,"Harina de trigo Hacendado", 1000, "g", 350, 1.3, 0.2, 73.0, 0.6, 3.0, 10.0, 0.02, 0.75, 4),
+(null,"Cannelloni tubos precocidos Hacendado", 250, "g", 350, 1.5, 0.3, 72.6, 3.5, 3.0, 11.5, 0.005, 1.35, 3),
+(null,"Harina de trigo Hacendado", 1000, "g", 350, 1.3, 0.2, 73.0, 0.6, 3.0, 10.0, 0.02, 0.75, 4),
 (null,"Harina de fuerza Hacendado", 1000, "g", 340, 0.9, 0.2, 68.8, 0.4, 2.5, 13.0, 0.001, 0.95, 4),
 (null,"Preparado para bizcochos con levadura incorporada Hacendado", 1000, "g", 332.6, 1.14, 0.139, 69.79, 0.55, 0.0, 10.10, 0.65, 1.05, 4),
 (null,"Chocolate negro fundir Hacendado", 200, "g", 529, 33.0, 20.0, 48.0, 45.0, 8.5, 5.8, 0.1, 0.90, 4),
@@ -222,20 +215,17 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 INSERT INTO recipes(id_recipe,name_recipe,id_recipe_category) VALUES
 (1, "Arroz a la cubana", 7);
 
-INSERT INTO recipes_has_ingredients(id_recipe_general, recipes_id_recipe, ingredients_id_ingredient, cantidad_ingredient) VALUES
-(1, 1, 1001, 20),
-(1, null,3023, 400),
-(1, null,1045, 210);
+INSERT INTO new_recipes(recipes_id_recipe,id_new_recipes, ingredients_id_ingredient, cantidad_ingredient) VALUES
+(1, 1, 1070, 250),
+(null, 1, 1039, 200);
 
-insert into recipes (recipe_ingredients)
-Select ingredients_id_ingredient from recipes_has_ingredients where id_recipe_general;
 
 SELECT * FROM ingredients;
 SELECT * FROM recipe_category;
-SELECT * FROM recipes_has_ingredients ORDER BY id_recipe_general;
+SELECT * FROM new_recipes;
 SELECT * FROM recipes;
 
-SELECT id_recipe_general, group_concat(DISTINCT ingredients_id_ingredient)
-from recipes_has_ingredients
-group by id_recipe_general
+SELECT id_new_recipes, group_concat(DISTINCT ingredients_id_ingredient)
+from new_recipes
+group by id_new_recipes
 ORDER BY group_concat(DISTINCT ingredients_id_ingredient) ASC;
