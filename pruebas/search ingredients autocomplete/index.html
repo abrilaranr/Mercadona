@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hola</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="d-flex">
+      <section>
+        <!--Make sure the form has the autocomplete function switched off:-->
+        <form autocomplete="off" action="/action_page.php">
+          <div class="autocomplete" style="width: 300px">
+            <input
+              id="myInput"
+              type="text"
+              name="myCountry"
+              placeholder="Search by ingredient Id"
+            />
+          </div>
+
+          <!-- <select id="selectItem" onchange="run()">
+      <option value="Harina">Harina</option>
+      <option value="Azucar" selected="selected">Azucar</option>
+    </select> -->
+        </form>
+
+        <button onclick="actualizar()">Actualizar</button>
+        <span onclick="addIngredient()"
+          >agrega ingrediente personalizado prueba</span
+        >
+        <!-- <h2 onclick="findIngredientById(1)">search by id 1</h2> -->
+        <table class="table" id="miTabla">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Ingrediente</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Kcal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td scope="row">
+                <img
+                  onclick="deleteIngredient(this.dataset.ingredientId)"
+                  src="/icons/close-line.svg"
+                  alt=""
+                  data-ingredient-id="3"
+                />
+              </td>
+              <td
+                scope="row"
+                onload="getIngredientInfo('Leche condensada', this)"
+              >
+                Leche condensada
+              </td>
+              <td>
+                <div class="input-table">
+                  <input
+                    type="number"
+                    data-ingredient-id="3"
+                    oninput="calcIngredient(this.dataset.ingredientId, this.value)"
+                  />
+                  <label 
+                    for=""
+                    onload="getIngredientMeasure('Leche condensada', this)"
+                    >gr</label
+                  >
+                </div>
+              </td>
+              <td class="kcal" data-ingredient-id="3">726</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <span class="display-5">Tu receta tiene</span><br />
+        <span class="display-1" id="totalKcal">0 kcal</span><br />
+        <span class="display-5">y hacerla te costará</span><br />
+        <span class="display-1" id="totalPrice">0.00 €</span><br />
+        <br />
+        <ul>
+          <li id="grasas">Grasas:</li>
+          <li id="saturadas">De las cuales saturadas:</li>
+          <li id="carbohidratos">Carbohidratos:</li>
+          <li id="azucares">De los cuales azúcares:</li>
+          <li id="proteinas">Proteínas:</li>
+          <li id="fibras">Fibras:</li>
+          <li id="sal">Sal:</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
