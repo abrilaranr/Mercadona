@@ -61,6 +61,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
   `id_recipe` INT NOT NULL AUTO_INCREMENT UNIQUE,
   `name_recipe` VARCHAR(45) NULL UNIQUE,
   `id_recipe_category` INT,
+  price_recipe INT,
+  kcal_recipe INT,
   FOREIGN KEY (id_recipe_category) references recipe_category (id_recipe_category),
   PRIMARY KEY (`id_recipe`));
 
