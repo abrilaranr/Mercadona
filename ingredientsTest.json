@@ -1,18 +1,83 @@
 [
     {
+        "idIngredient": -1,
+        "nameIngredient": "testing ingredient asdfasdf",
+        "peso": 500,
+        "medicion": "ml",
+        "kcal": 824,
+        "grasas": 92,
+        "grasaSaturadas": 18,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
+        "fibra": 0,
+        "proteinas": 5,
+        "sal": 0,
+        "precio": 4.1,
+        "numberCategory": 1
+    },
+    {
+        "idIngredient": 1,
+        "nameIngredient": "testing ingredient",
+        "peso": 5,
+        "medicion": "g",
+        "kcal": 824,
+        "grasas": 92,
+        "grasaSaturadas": 18,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
+        "fibra": 0,
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.1,
+        "numberCategory": 1
+    },
+    {
+        "idIngredient": 2,
+        "nameIngredient": "testing asdfasdf",
+        "peso": 500,
+        "medicion": "ml",
+        "kcal": 824,
+        "grasas": 92,
+        "grasaSaturadas": 18,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
+        "fibra": 0,
+        "proteinas": 5,
+        "sal": 0,
+        "precio": 4.1,
+        "numberCategory": 1
+    },
+    {
+        "idIngredient": 3,
+        "nameIngredient": "testing 333",
+        "peso": 5,
+        "medicion": "g",
+        "kcal": 824,
+        "grasas": 92,
+        "grasaSaturadas": 18,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
+        "fibra": 0,
+        "proteinas": 5,
+        "sal": 0,
+        "precio": 4.1,
+        "numberCategory": 1
+    },
+    {
         "idIngredient": 1001,
         "nameIngredient": "Aceite de Oliva Virgen extra, Hacendado",
         "peso": 1000,
         "medicion": "ml",
         "kcal": 822,
-        "grasas": 91.0,
-        "grasaSaturadas": 13.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 91,
+        "grasaSaturadas": 13,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 4.25
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.25,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1002,
@@ -20,14 +85,15 @@
         "peso": 750,
         "medicion": "ml",
         "kcal": 900,
-        "grasas": 91.0,
-        "grasaSaturadas": 13.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 91,
+        "grasaSaturadas": 13,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 4.5
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.5,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1003,
@@ -35,14 +101,15 @@
         "peso": 1000,
         "medicion": "ml",
         "kcal": 822,
-        "grasas": 91.0,
-        "grasaSaturadas": 14.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 91,
+        "grasaSaturadas": 14,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 3.9
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 3.9,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1004,
@@ -50,14 +117,15 @@
         "peso": 1000,
         "medicion": "ml",
         "kcal": 819,
-        "grasas": 91.0,
-        "grasaSaturadas": 12.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 91,
+        "grasaSaturadas": 12,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 4.2
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1005,
@@ -65,14 +133,15 @@
         "peso": 200,
         "medicion": "ml",
         "kcal": 824,
-        "grasas": 91.0,
-        "grasaSaturadas": 15.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 91,
+        "grasaSaturadas": 15,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 2.15
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 2.15,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1006,
@@ -80,14 +149,15 @@
         "peso": 500,
         "medicion": "ml",
         "kcal": 824,
-        "grasas": 92.0,
-        "grasaSaturadas": 18.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 92,
+        "grasaSaturadas": 18,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 4.1
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1007,
@@ -95,14 +165,15 @@
         "peso": 1000,
         "medicion": "ml",
         "kcal": 828,
-        "grasas": 92.0,
+        "grasas": 92,
         "grasaSaturadas": 7.5,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 2.55
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 2.55,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1008,
@@ -110,14 +181,15 @@
         "peso": 450,
         "medicion": "ml",
         "kcal": 900,
-        "grasas": 100.0,
+        "grasas": 100,
         "grasaSaturadas": 94.5,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 0.0,
-        "precio": 4.5
+        "proteinas": 0,
+        "sal": 0,
+        "precio": 4.5,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1009,
@@ -125,14 +197,15 @@
         "peso": 250,
         "medicion": "ml",
         "kcal": 123,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
-        "carbohidratos": 25.0,
-        "carbohidratosAzucares": 25.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
+        "carbohidratos": 25,
+        "carbohidratosAzucares": 25,
         "fibra": 0,
-        "proteinas": 1.0,
+        "proteinas": 1,
         "sal": 0.6,
-        "precio": 1.1
+        "precio": 1.1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1010,
@@ -140,14 +213,15 @@
         "peso": 280,
         "medicion": "ml",
         "kcal": 29,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
         "carbohidratos": 7.1,
         "carbohidratosAzucares": 1.5,
         "fibra": 0,
-        "proteinas": 0.0,
+        "proteinas": 0,
         "sal": 0.01,
-        "precio": 0.95
+        "precio": 0.95,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1011,
@@ -155,14 +229,15 @@
         "peso": 250,
         "medicion": "ml",
         "kcal": 178,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
-        "carbohidratos": 41.0,
-        "carbohidratosAzucares": 40.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
+        "carbohidratos": 41,
+        "carbohidratosAzucares": 40,
         "fibra": 0,
         "proteinas": 1.1,
         "sal": 0.55,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1012,
@@ -170,14 +245,15 @@
         "peso": 250,
         "medicion": "ml",
         "kcal": 37,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
         "carbohidratos": 7.1,
         "carbohidratosAzucares": 1.5,
         "fibra": 0,
-        "proteinas": 0.0,
+        "proteinas": 0,
         "sal": 0.02,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1013,
@@ -185,14 +261,15 @@
         "peso": 250,
         "medicion": "ml",
         "kcal": 152,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
-        "carbohidratos": 36.0,
-        "carbohidratosAzucares": 30.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
+        "carbohidratos": 36,
+        "carbohidratosAzucares": 30,
         "fibra": 0,
-        "proteinas": 0.0,
+        "proteinas": 0,
         "sal": 0.04,
-        "precio": 2.3
+        "precio": 2.3,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1014,
@@ -200,14 +277,15 @@
         "peso": 1000,
         "medicion": "g",
         "kcal": 0,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
-        "proteinas": 0.0,
-        "sal": 100.0,
-        "precio": 0.25
+        "proteinas": 0,
+        "sal": 1000,
+        "precio": 0.25,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1015,
@@ -215,14 +293,15 @@
         "peso": 150,
         "medicion": "g",
         "kcal": 590,
-        "grasas": 44.0,
-        "grasaSaturadas": 21.0,
-        "carbohidratos": 40.0,
-        "carbohidratosAzucares": 9.0,
+        "grasas": 44,
+        "grasaSaturadas": 21,
+        "carbohidratos": 40,
+        "carbohidratosAzucares": 9,
         "fibra": 5,
-        "proteinas": 6.0,
+        "proteinas": 6,
         "sal": 1.2,
-        "precio": 0.8
+        "precio": 0.8,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1016,
@@ -230,14 +309,15 @@
         "peso": 17,
         "medicion": "g",
         "kcal": 155,
-        "grasas": 1.0,
+        "grasas": 1,
         "grasaSaturadas": 0.4,
         "carbohidratos": 29.8,
         "carbohidratosAzucares": 5.4,
         "fibra": 0,
         "proteinas": 3.6,
         "sal": 50.2,
-        "precio": 0.79
+        "precio": 0.79,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1017,
@@ -252,7 +332,8 @@
         "fibra": 8,
         "proteinas": 6.6,
         "sal": 24.8,
-        "precio": 1.4
+        "precio": 1.4,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1018,
@@ -267,7 +348,8 @@
         "fibra": 7,
         "proteinas": 6.2,
         "sal": 18.3,
-        "precio": 1.4
+        "precio": 1.4,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1019,
@@ -280,9 +362,10 @@
         "carbohidratos": 32.8,
         "carbohidratosAzucares": 20.9,
         "fibra": 14,
-        "proteinas": 11.0,
-        "sal": 29.0,
-        "precio": 1.35
+        "proteinas": 11,
+        "sal": 29,
+        "precio": 1.35,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1020,
@@ -297,7 +380,8 @@
         "fibra": 12,
         "proteinas": 14.2,
         "sal": 16.1,
-        "precio": 1.1
+        "precio": 1.1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1021,
@@ -306,13 +390,14 @@
         "medicion": "g",
         "kcal": 303,
         "grasas": 1.3,
-        "grasaSaturadas": 0.0,
+        "grasaSaturadas": 0,
         "carbohidratos": 58.3,
         "carbohidratosAzucares": 5.2,
         "fibra": 7,
         "proteinas": 11.1,
-        "sal": 12.0,
-        "precio": 1.85
+        "sal": 12,
+        "precio": 1.85,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1022,
@@ -327,7 +412,8 @@
         "fibra": 6,
         "proteinas": 6.9,
         "sal": 63.3,
-        "precio": 1.45
+        "precio": 1.45,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1023,
@@ -342,7 +428,8 @@
         "fibra": 24,
         "proteinas": 10.2,
         "sal": 19.3,
-        "precio": 1.45
+        "precio": 1.45,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1024,
@@ -357,7 +444,8 @@
         "fibra": 14,
         "proteinas": 4.2,
         "sal": 62.5,
-        "precio": 2.35
+        "precio": 2.35,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1025,
@@ -368,11 +456,12 @@
         "grasas": 14.4,
         "grasaSaturadas": 5.9,
         "carbohidratos": 12.9,
-        "carbohidratosAzucares": 1.0,
+        "carbohidratosAzucares": 1,
         "fibra": 30,
         "proteinas": 11.6,
         "sal": 20.9,
-        "precio": 1.5
+        "precio": 1.5,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1026,
@@ -380,14 +469,15 @@
         "peso": 500,
         "medicion": "ml",
         "kcal": 599,
-        "grasas": 65.0,
+        "grasas": 65,
         "grasaSaturadas": 9.7,
         "carbohidratos": 2.4,
         "carbohidratosAzucares": 1.33,
         "fibra": 0,
         "proteinas": 0.6,
         "sal": 1.1,
-        "precio": 1.4
+        "precio": 1.4,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1027,
@@ -395,14 +485,15 @@
         "peso": 200,
         "medicion": "ml",
         "kcal": 599,
-        "grasas": 65.0,
+        "grasas": 65,
         "grasaSaturadas": 9.7,
         "carbohidratos": 2.4,
         "carbohidratosAzucares": 1.33,
         "fibra": 0,
         "proteinas": 0.6,
         "sal": 1.1,
-        "precio": 1.0
+        "precio": 1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1028,
@@ -410,14 +501,15 @@
         "peso": 475,
         "medicion": "ml",
         "kcal": 552,
-        "grasas": 61.0,
+        "grasas": 61,
         "grasaSaturadas": 9.7,
         "carbohidratos": 2.2,
         "carbohidratosAzucares": 1.4,
         "fibra": 0,
         "proteinas": 0.8,
         "sal": 1.1,
-        "precio": 2.95
+        "precio": 2.95,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1029,
@@ -425,14 +517,15 @@
         "peso": 475,
         "medicion": "ml",
         "kcal": 552,
-        "grasas": 61.0,
+        "grasas": 61,
         "grasaSaturadas": 9.7,
         "carbohidratos": 2.2,
         "carbohidratosAzucares": 1.4,
         "fibra": 0,
         "proteinas": 0.8,
         "sal": 1.1,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1030,
@@ -440,14 +533,15 @@
         "peso": 450,
         "medicion": "ml",
         "kcal": 277,
-        "grasas": 27.0,
+        "grasas": 27,
         "grasaSaturadas": 4.4,
-        "carbohidratos": 9.0,
+        "carbohidratos": 9,
         "carbohidratosAzucares": 2.4,
         "fibra": 0,
         "proteinas": 0.7,
         "sal": 0.99,
-        "precio": 2.0
+        "precio": 2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1031,
@@ -455,14 +549,15 @@
         "peso": 430,
         "medicion": "ml",
         "kcal": 277,
-        "grasas": 27.0,
+        "grasas": 27,
         "grasaSaturadas": 4.4,
-        "carbohidratos": 9.0,
+        "carbohidratos": 9,
         "carbohidratosAzucares": 2.4,
         "fibra": 0,
         "proteinas": 0.7,
         "sal": 0.99,
-        "precio": 2.0
+        "precio": 2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1032,
@@ -470,14 +565,15 @@
         "peso": 225,
         "medicion": "ml",
         "kcal": 277,
-        "grasas": 27.0,
+        "grasas": 27,
         "grasaSaturadas": 4.4,
-        "carbohidratos": 9.0,
+        "carbohidratos": 9,
         "carbohidratosAzucares": 2.4,
         "fibra": 0,
         "proteinas": 0.7,
         "sal": 0.99,
-        "precio": 1.0
+        "precio": 1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1033,
@@ -485,14 +581,15 @@
         "peso": 500,
         "medicion": "ml",
         "kcal": 294,
-        "grasas": 31.0,
+        "grasas": 31,
         "grasaSaturadas": 4.8,
         "carbohidratos": 6.5,
         "carbohidratosAzucares": 3.5,
         "fibra": 0,
         "proteinas": 0.7,
         "sal": 2.1,
-        "precio": 1.4
+        "precio": 1.4,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1034,
@@ -500,14 +597,15 @@
         "peso": 600,
         "medicion": "g",
         "kcal": 115,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
-        "carbohidratos": 27.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
+        "carbohidratos": 27,
         "carbohidratosAzucares": 20.5,
         "fibra": 0,
         "proteinas": 1.3,
         "sal": 1.8,
-        "precio": 0.9
+        "precio": 0.9,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1035,
@@ -516,13 +614,14 @@
         "medicion": "g",
         "kcal": 71,
         "grasas": 0.2,
-        "grasaSaturadas": 0.0,
+        "grasaSaturadas": 0,
         "carbohidratos": 15.9,
-        "carbohidratosAzucares": 10.0,
+        "carbohidratosAzucares": 10,
         "fibra": 0,
         "proteinas": 1.2,
         "sal": 2.1,
-        "precio": 1.1
+        "precio": 1.1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1036,
@@ -537,7 +636,8 @@
         "fibra": 0,
         "proteinas": 7.7,
         "sal": 4.2,
-        "precio": 1.5
+        "precio": 1.5,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1037,
@@ -545,14 +645,15 @@
         "peso": 180,
         "medicion": "ml",
         "kcal": 749,
-        "grasas": 82.0,
-        "grasaSaturadas": 10.0,
+        "grasas": 82,
+        "grasaSaturadas": 10,
         "carbohidratos": 1.5,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
         "proteinas": 1.2,
         "sal": 1.3,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1038,
@@ -560,14 +661,15 @@
         "peso": 200,
         "medicion": "ml",
         "kcal": 746,
-        "grasas": 82.0,
-        "grasaSaturadas": 10.0,
+        "grasas": 82,
+        "grasaSaturadas": 10,
         "carbohidratos": 1.3,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
         "proteinas": 1.1,
         "sal": 1.3,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1039,
@@ -581,8 +683,9 @@
         "carbohidratosAzucares": 6.9,
         "fibra": 0,
         "proteinas": 1.5,
-        "sal": 1.0,
-        "precio": 1.2
+        "sal": 1,
+        "precio": 1.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1040,
@@ -596,8 +699,9 @@
         "carbohidratosAzucares": 6.9,
         "fibra": 0,
         "proteinas": 1.5,
-        "sal": 1.0,
-        "precio": 0.9
+        "sal": 1,
+        "precio": 0.9,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1041,
@@ -611,8 +715,9 @@
         "carbohidratosAzucares": 6.9,
         "fibra": 0,
         "proteinas": 1.5,
-        "sal": 1.0,
-        "precio": 0.85
+        "sal": 1,
+        "precio": 0.85,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1042,
@@ -620,14 +725,15 @@
         "peso": 560,
         "medicion": "g",
         "kcal": 201,
-        "grasas": 15.0,
+        "grasas": 15,
         "grasaSaturadas": 2.1,
         "carbohidratos": 14.3,
         "carbohidratosAzucares": 12.5,
         "fibra": 0,
         "proteinas": 1.6,
         "sal": 0.9,
-        "precio": 1.85
+        "precio": 1.85,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1043,
@@ -635,14 +741,15 @@
         "peso": 300,
         "medicion": "g",
         "kcal": 201,
-        "grasas": 15.0,
+        "grasas": 15,
         "grasaSaturadas": 2.1,
         "carbohidratos": 14.3,
         "carbohidratosAzucares": 12.5,
         "fibra": 0,
         "proteinas": 1.6,
         "sal": 0.9,
-        "precio": 1.45
+        "precio": 1.45,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1044,
@@ -650,14 +757,15 @@
         "peso": 380,
         "medicion": "g",
         "kcal": 104,
-        "grasas": 5.0,
+        "grasas": 5,
         "grasaSaturadas": 0.5,
         "carbohidratos": 12.4,
         "carbohidratosAzucares": 9.7,
         "fibra": 0,
-        "proteinas": 2.0,
+        "proteinas": 2,
         "sal": 0.8,
-        "precio": 1.05
+        "precio": 1.05,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1045,
@@ -671,8 +779,9 @@
         "carbohidratosAzucares": 6.9,
         "fibra": 0,
         "proteinas": 1.5,
-        "sal": 1.0,
-        "precio": 0.95
+        "sal": 1,
+        "precio": 0.95,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1046,
@@ -687,7 +796,8 @@
         "fibra": 0,
         "proteinas": 1.5,
         "sal": 1.2,
-        "precio": 1.05
+        "precio": 1.05,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1047,
@@ -697,12 +807,13 @@
         "kcal": 130,
         "grasas": 8.5,
         "grasaSaturadas": 1.3,
-        "carbohidratos": 11.0,
+        "carbohidratos": 11,
         "carbohidratosAzucares": 9.7,
         "fibra": 0,
         "proteinas": 1.4,
-        "sal": 1.0,
-        "precio": 1.2
+        "sal": 1,
+        "precio": 1.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1048,
@@ -711,13 +822,14 @@
         "medicion": "g",
         "kcal": 150,
         "grasas": 0.1,
-        "grasaSaturadas": 0.0,
+        "grasaSaturadas": 0,
         "carbohidratos": 35.5,
         "carbohidratosAzucares": 27.8,
         "fibra": 0,
         "proteinas": 1.2,
         "sal": 1.8,
-        "precio": 1.0
+        "precio": 1,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1049,
@@ -730,9 +842,10 @@
         "carbohidratos": 55.8,
         "carbohidratosAzucares": 20.1,
         "fibra": 1,
-        "proteinas": 14.0,
+        "proteinas": 14,
         "sal": 9.7,
-        "precio": 0.95
+        "precio": 0.95,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1050,
@@ -747,7 +860,8 @@
         "fibra": 0,
         "proteinas": 1.5,
         "sal": 1.8,
-        "precio": 1.25
+        "precio": 1.25,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1051,
@@ -762,7 +876,8 @@
         "fibra": 0,
         "proteinas": 1.6,
         "sal": 2.8,
-        "precio": 1.25
+        "precio": 1.25,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1052,
@@ -770,14 +885,15 @@
         "peso": 300,
         "medicion": "g",
         "kcal": 154,
-        "grasas": 10.0,
+        "grasas": 10,
         "grasaSaturadas": 1.9,
         "carbohidratos": 11.4,
         "carbohidratosAzucares": 9.6,
         "fibra": 0,
         "proteinas": 3.8,
         "sal": 1.4,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1053,
@@ -785,14 +901,15 @@
         "peso": 300,
         "medicion": "g",
         "kcal": 69,
-        "grasas": 3.0,
+        "grasas": 3,
         "grasaSaturadas": 0.4,
         "carbohidratos": 8.9,
-        "carbohidratosAzucares": 8.0,
+        "carbohidratosAzucares": 8,
         "fibra": 0,
         "proteinas": 1.2,
         "sal": 0.6,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1054,
@@ -801,13 +918,14 @@
         "medicion": "g",
         "kcal": 121,
         "grasas": 8.5,
-        "grasaSaturadas": 6.0,
+        "grasaSaturadas": 6,
         "carbohidratos": 6.1,
         "carbohidratosAzucares": 1.9,
         "fibra": 1,
         "proteinas": 4.7,
         "sal": 1.2,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1055,
@@ -815,14 +933,15 @@
         "peso": 150,
         "medicion": "g",
         "kcal": 529,
-        "grasas": 51.0,
+        "grasas": 51,
         "grasaSaturadas": 7.8,
-        "carbohidratos": 12.0,
+        "carbohidratos": 12,
         "carbohidratosAzucares": 6.2,
         "fibra": 3,
-        "proteinas": 4.0,
+        "proteinas": 4,
         "sal": 1.2,
-        "precio": 1.35
+        "precio": 1.35,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1056,
@@ -832,12 +951,13 @@
         "kcal": 117,
         "grasas": 9.8,
         "grasaSaturadas": 6.1,
-        "carbohidratos": 5.0,
+        "carbohidratos": 5,
         "carbohidratosAzucares": 1.7,
         "fibra": 2,
         "proteinas": 1.7,
         "sal": 1.7,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1057,
@@ -845,14 +965,15 @@
         "peso": 200,
         "medicion": "g",
         "kcal": 189,
-        "grasas": 17.0,
-        "grasaSaturadas": 10.0,
+        "grasas": 17,
+        "grasaSaturadas": 10,
         "carbohidratos": 4.2,
         "carbohidratosAzucares": 2.7,
         "fibra": 0,
         "proteinas": 4.9,
         "sal": 1.6,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1058,
@@ -860,14 +981,15 @@
         "peso": 250,
         "medicion": "ml",
         "kcal": 74,
-        "grasas": 0.0,
-        "grasaSaturadas": 0.0,
+        "grasas": 0,
+        "grasaSaturadas": 0,
         "carbohidratos": 8.3,
         "carbohidratosAzucares": 4.3,
         "fibra": 0,
         "proteinas": 7.5,
         "sal": 15.7,
-        "precio": 1.35
+        "precio": 1.35,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1059,
@@ -881,8 +1003,9 @@
         "carbohidratosAzucares": 2.8,
         "fibra": 4,
         "proteinas": 8.2,
-        "sal": 1.0,
-        "precio": 2.25
+        "sal": 1,
+        "precio": 2.25,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1060,
@@ -890,14 +1013,15 @@
         "peso": 420,
         "medicion": "g",
         "kcal": 189,
-        "grasas": 17.0,
-        "grasaSaturadas": 10.0,
+        "grasas": 17,
+        "grasaSaturadas": 10,
         "carbohidratos": 4.2,
         "carbohidratosAzucares": 2.7,
         "fibra": 0,
         "proteinas": 4.9,
         "sal": 1.6,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1061,
@@ -905,14 +1029,15 @@
         "peso": 130,
         "medicion": "g",
         "kcal": 423,
-        "grasas": 39.0,
+        "grasas": 39,
         "grasaSaturadas": 4.6,
-        "carbohidratos": 14.0,
+        "carbohidratos": 14,
         "carbohidratosAzucares": 4.1,
         "fibra": 0,
         "proteinas": 3.4,
         "sal": 1.4,
-        "precio": 1.8
+        "precio": 1.8,
+        "numberCategory": 1
     },
     {
         "idIngredient": 1062,
@@ -921,31 +1046,33 @@
         "medicion": "g",
         "kcal": 66,
         "grasas": 10.1,
-        "grasaSaturadas": 30.0,
+        "grasaSaturadas": 30,
         "carbohidratos": 3.2,
         "carbohidratosAzucares": 1.4,
         "fibra": 3,
         "proteinas": 24.9,
         "sal": 0.04,
-        "precio": 2.9
+        "precio": 2.9,
+        "numberCategory": 1
     },
     {
-        "idIngredient": 2001,
+        "idIngredient": 1063,
         "nameIngredient": "Aceitunas manzanilla rellenas de anchoa Hacendado 3 botes x 50g",
         "peso": 50,
         "medicion": "g",
         "kcal": 150,
-        "grasas": 15.0,
+        "grasas": 15,
         "grasaSaturadas": 2.9,
         "carbohidratos": 0.9,
         "carbohidratosAzucares": 0.5,
         "fibra": 0,
         "proteinas": 1.6,
         "sal": 2.6,
-        "precio": 1.25
+        "precio": 1.25,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2002,
+        "idIngredient": 1064,
         "nameIngredient": "Aceitunas manzanilla rellenas de anchoa Hacendado reducidas en sal 3 x 50g",
         "peso": 50,
         "medicion": "g",
@@ -957,25 +1084,27 @@
         "fibra": 0,
         "proteinas": 1.7,
         "sal": 1.9,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2003,
+        "idIngredient": 1065,
         "nameIngredient": "Aceitunas negras Hacendado sin hueso",
         "peso": 150,
         "medicion": "g",
         "kcal": 125,
-        "grasas": 13.0,
+        "grasas": 13,
         "grasaSaturadas": 2.2,
-        "carbohidratos": 0.0,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratos": 0,
+        "carbohidratosAzucares": 0,
         "fibra": 0,
         "proteinas": 0.5,
         "sal": 2.5,
-        "precio": 0.9
+        "precio": 0.9,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2004,
+        "idIngredient": 1066,
         "nameIngredient": "Pepinillos pequeños Hacendado",
         "peso": 250,
         "medicion": "g",
@@ -987,115 +1116,123 @@
         "fibra": 1,
         "proteinas": 1.3,
         "sal": 1.5,
-        "precio": 1.5
+        "precio": 1.5,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2005,
+        "idIngredient": 1067,
         "nameIngredient": "Altramuces Hacendado",
         "peso": 440,
         "medicion": "g",
         "kcal": 105,
         "grasas": 1.7,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 9.0,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratos": 9,
+        "carbohidratosAzucares": 0,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 3.5,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2006,
+        "idIngredient": 1068,
         "nameIngredient": "Nuez natural Hacendado pelada",
         "peso": 200,
         "medicion": "g",
         "kcal": 716,
         "grasas": 69.6,
-        "grasaSaturadas": 6.0,
+        "grasaSaturadas": 6,
         "carbohidratos": 2.2,
         "carbohidratosAzucares": 1.7,
         "fibra": 6,
-        "proteinas": 17.0,
-        "sal": 0.0,
-        "precio": 2.6
+        "proteinas": 17,
+        "sal": 0,
+        "precio": 2.6,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 2007,
+        "idIngredient": 1069,
         "nameIngredient": "Almendra natural Hacendado",
         "peso": 200,
         "medicion": "g",
         "kcal": 603,
-        "grasas": 51.0,
+        "grasas": 51,
         "grasaSaturadas": 3.9,
         "carbohidratos": 5.4,
         "carbohidratosAzucares": 5.4,
         "fibra": 11,
-        "proteinas": 25.0,
-        "sal": 0.0,
-        "precio": 2.45
+        "proteinas": 25,
+        "sal": 0,
+        "precio": 2.45,
+        "numberCategory": 2
     },
     {
-        "idIngredient": 3001,
+        "idIngredient": 1070,
         "nameIngredient": "Arroz redondo Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 344,
-        "grasas": 1.0,
+        "grasas": 1,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 75.0,
+        "carbohidratos": 75,
         "carbohidratosAzucares": 0.5,
         "fibra": 0,
         "proteinas": 8.2,
         "sal": 0.01,
-        "precio": 0.95
+        "precio": 0.95,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3002,
+        "idIngredient": 1071,
         "nameIngredient": "Arroz bomba Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 349,
         "grasas": 0.9,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 77.0,
+        "carbohidratos": 77,
         "carbohidratosAzucares": 0.5,
         "fibra": 0,
         "proteinas": 7.7,
         "sal": 0.01,
-        "precio": 2.6
+        "precio": 2.6,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3003,
+        "idIngredient": 1072,
         "nameIngredient": "Arroz largo Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 345,
         "grasas": 0.7,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 77.0,
+        "carbohidratos": 77,
         "carbohidratosAzucares": 0.5,
         "fibra": 0,
         "proteinas": 7.2,
         "sal": 0.01,
-        "precio": 0.98
+        "precio": 0.98,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3004,
+        "idIngredient": 1073,
         "nameIngredient": "Arroz integral redondo Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 347,
         "grasas": 2.5,
         "grasaSaturadas": 0.5,
-        "carbohidratos": 71.0,
+        "carbohidratos": 71,
         "carbohidratosAzucares": 1.2,
         "fibra": 3,
         "proteinas": 8.4,
         "sal": 0.01,
-        "precio": 1.5
+        "precio": 1.5,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3005,
+        "idIngredient": 1074,
         "nameIngredient": "Quinoa Hacendado",
         "peso": 500,
         "medicion": "g",
@@ -1105,27 +1242,29 @@
         "carbohidratos": 66.05,
         "carbohidratosAzucares": 6.32,
         "fibra": 7,
-        "proteinas": 14.0,
-        "sal": 0.0,
-        "precio": 2.5
+        "proteinas": 14,
+        "sal": 0,
+        "precio": 2.5,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3006,
+        "idIngredient": 1075,
         "nameIngredient": "Arroz vaporizado Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 345,
         "grasas": 0.7,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 76.0,
+        "carbohidratos": 76,
         "carbohidratosAzucares": 0.6,
         "fibra": 0,
         "proteinas": 7.9,
         "sal": 0.01,
-        "precio": 1.25
+        "precio": 1.25,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3007,
+        "idIngredient": 1076,
         "nameIngredient": "Garbanzo cocido Hacendado Tarro 570g",
         "peso": 400,
         "medicion": "g",
@@ -1137,10 +1276,11 @@
         "fibra": 0,
         "proteinas": 5.5,
         "sal": 0.8,
-        "precio": 0.75
+        "precio": 0.75,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3008,
+        "idIngredient": 1077,
         "nameIngredient": "Garbanzo cocido pedrosillano Hacendado categoría extra",
         "peso": 400,
         "medicion": "g",
@@ -1152,10 +1292,11 @@
         "fibra": 0,
         "proteinas": 5.5,
         "sal": 0.8,
-        "precio": 0.95
+        "precio": 0.95,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3009,
+        "idIngredient": 1078,
         "nameIngredient": "Garbanzo Hacendado categoría extra",
         "peso": 1000,
         "medicion": "g",
@@ -1163,14 +1304,15 @@
         "grasas": 6.1,
         "grasaSaturadas": 0.4,
         "carbohidratos": 47.5,
-        "carbohidratosAzucares": 6.0,
+        "carbohidratosAzucares": 6,
         "fibra": 14,
         "proteinas": 18.6,
         "sal": 0.07,
-        "precio": 2.0
+        "precio": 2,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3010,
+        "idIngredient": 1079,
         "nameIngredient": "Alubia cocida blanca Hacendado Tarro 570g",
         "peso": 400,
         "medicion": "g",
@@ -1182,10 +1324,11 @@
         "fibra": 0,
         "proteinas": 5.8,
         "sal": 0.8,
-        "precio": 0.7
+        "precio": 0.7,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3011,
+        "idIngredient": 1080,
         "nameIngredient": "Lenteja cocida Hacendado 570g",
         "peso": 400,
         "medicion": "g",
@@ -1197,10 +1340,11 @@
         "fibra": 0,
         "proteinas": 8.2,
         "sal": 0.8,
-        "precio": 0.77
+        "precio": 0.77,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3012,
+        "idIngredient": 1081,
         "nameIngredient": "Lenteja pardina Hacendado categoría extra",
         "peso": 1000,
         "medicion": "g",
@@ -1212,25 +1356,27 @@
         "fibra": 10,
         "proteinas": 24.5,
         "sal": 0.05,
-        "precio": 1.6
+        "precio": 1.6,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3013,
+        "idIngredient": 1082,
         "nameIngredient": "Soja texturizada grano fino Hacendado",
         "peso": 250,
         "medicion": "g",
         "kcal": 364,
-        "grasas": 4.0,
+        "grasas": 4,
         "grasaSaturadas": 0.6,
-        "carbohidratos": 30.0,
-        "carbohidratosAzucares": 0.0,
+        "carbohidratos": 30,
+        "carbohidratosAzucares": 0,
         "fibra": 4,
-        "proteinas": 50.0,
+        "proteinas": 50,
         "sal": 0.04,
-        "precio": 1.85
+        "precio": 1.85,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3014,
+        "idIngredient": 1083,
         "nameIngredient": "Lenteja Hacendado categoría extra",
         "peso": 1000,
         "medicion": "g",
@@ -1242,265 +1388,283 @@
         "fibra": 10,
         "proteinas": 24.5,
         "sal": 0.05,
-        "precio": 1.75
+        "precio": 1.75,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3015,
+        "idIngredient": 1084,
         "nameIngredient": "Fideo cabello de ángel Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.78
+        "precio": 0.78,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3016,
+        "idIngredient": 1085,
         "nameIngredient": "Fideuá Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.78
+        "precio": 0.78,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3017,
+        "idIngredient": 1086,
         "nameIngredient": "Fideo grueso/medio/pequeño Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.78
+        "precio": 0.78,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3018,
+        "idIngredient": 1087,
         "nameIngredient": "Fideo integral Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 349,
         "grasas": 2.6,
         "grasaSaturadas": 0.4,
-        "carbohidratos": 65.0,
-        "carbohidratosAzucares": 4.0,
+        "carbohidratos": 65,
+        "carbohidratosAzucares": 4,
         "fibra": 7,
-        "proteinas": 13.0,
+        "proteinas": 13,
         "sal": 0.04,
-        "precio": 1.1
+        "precio": 1.1,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3019,
+        "idIngredient": 1088,
         "nameIngredient": "Fideo sin gluten con quinoa Felicia",
         "peso": 500,
         "medicion": "g",
         "kcal": 355,
-        "grasas": 2.0,
+        "grasas": 2,
         "grasaSaturadas": 0.7,
-        "carbohidratos": 76.0,
+        "carbohidratos": 76,
         "carbohidratosAzucares": 0.5,
         "fibra": 3,
         "proteinas": 7.3,
         "sal": 0.01,
-        "precio": 1.7
+        "precio": 1.7,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3020,
+        "idIngredient": 1089,
         "nameIngredient": "Pajaritas vegetales Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 359,
         "grasas": 1.7,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.1,
         "fibra": 5,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.0
+        "precio": 1,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3021,
+        "idIngredient": 1090,
         "nameIngredient": "Hélices con vegetales Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 359,
         "grasas": 1.7,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.1,
         "fibra": 5,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.42
+        "precio": 1.42,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3022,
+        "idIngredient": 1091,
         "nameIngredient": "Macarrón fino Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.77
+        "precio": 0.77,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3023,
+        "idIngredient": 1092,
         "nameIngredient": "Macarrón rayado Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.77
+        "precio": 0.77,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3024,
+        "idIngredient": 1093,
         "nameIngredient": "Macarrón Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3025,
+        "idIngredient": 1094,
         "nameIngredient": "Pasta galets",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.15
+        "precio": 1.15,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3026,
+        "idIngredient": 1095,
         "nameIngredient": "Tallarín Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.77
+        "precio": 0.77,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3027,
+        "idIngredient": 1096,
         "nameIngredient": "Spaghetti fino",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 0.77
+        "precio": 0.77,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3028,
+        "idIngredient": 1097,
         "nameIngredient": "Spaghetti al huevo Hacendado",
         "peso": 500,
         "medicion": "g",
         "kcal": 359,
         "grasas": 3.3,
-        "grasaSaturadas": 1.0,
-        "carbohidratos": 68.0,
+        "grasaSaturadas": 1,
+        "carbohidratos": 68,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.08,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3029,
+        "idIngredient": 1098,
         "nameIngredient": "Spaghetti Hacendado 1kg",
         "peso": 1000,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.15
+        "precio": 1.15,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3030,
+        "idIngredient": 1099,
         "nameIngredient": "Spaghetti Hacendado 500g",
         "peso": 500,
         "medicion": "g",
         "kcal": 366,
         "grasas": 1.5,
         "grasaSaturadas": 0.3,
-        "carbohidratos": 74.0,
+        "carbohidratos": 74,
         "carbohidratosAzucares": 3.5,
         "fibra": 4,
-        "proteinas": 12.0,
+        "proteinas": 12,
         "sal": 0.04,
-        "precio": 1.15
+        "precio": 1.15,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3031,
+        "idIngredient": 1100,
         "nameIngredient": "Spaghetti sin gluten con quinoa Felicia",
         "peso": 500,
         "medicion": "g",
         "kcal": 355,
-        "grasas": 2.0,
+        "grasas": 2,
         "grasaSaturadas": 0.7,
-        "carbohidratos": 76.0,
+        "carbohidratos": 76,
         "carbohidratosAzucares": 0.5,
         "fibra": 3,
         "proteinas": 7.3,
         "sal": 0.01,
-        "precio": 1.7
+        "precio": 1.7,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3032,
+        "idIngredient": 1101,
         "nameIngredient": "Gnocchi frescos Hacendado de patata",
         "peso": 500,
         "medicion": "g",
@@ -1512,25 +1676,27 @@
         "fibra": 0,
         "proteinas": 4.5,
         "sal": 0.87,
-        "precio": 1.1
+        "precio": 1.1,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3033,
+        "idIngredient": 1102,
         "nameIngredient": "Placas para canelones tradicionales Hacendado",
         "peso": 160,
         "medicion": "g",
         "kcal": 362,
         "grasas": 1.1,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 75.0,
-        "carbohidratosAzucares": 2.0,
+        "carbohidratos": 75,
+        "carbohidratosAzucares": 2,
         "fibra": 4,
-        "proteinas": 11.0,
+        "proteinas": 11,
         "sal": 0.01,
-        "precio": 0.7
+        "precio": 0.7,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 3034,
+        "idIngredient": 1103,
         "nameIngredient": "Cannelloni tubos precocidos Hacendado",
         "peso": 250,
         "medicion": "g",
@@ -1542,25 +1708,27 @@
         "fibra": 3,
         "proteinas": 11.5,
         "sal": 0.005,
-        "precio": 1.35
+        "precio": 1.35,
+        "numberCategory": 3
     },
     {
-        "idIngredient": 4001,
+        "idIngredient": 1104,
         "nameIngredient": "Harina de trigo Hacendado",
         "peso": 1000,
         "medicion": "g",
         "kcal": 350,
         "grasas": 1.3,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 73.0,
+        "carbohidratos": 73,
         "carbohidratosAzucares": 0.6,
         "fibra": 3,
-        "proteinas": 10.0,
+        "proteinas": 10,
         "sal": 0.02,
-        "precio": 0.75
+        "precio": 0.75,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4002,
+        "idIngredient": 1105,
         "nameIngredient": "Harina de fuerza Hacendado",
         "peso": 1000,
         "medicion": "g",
@@ -1570,12 +1738,13 @@
         "carbohidratos": 68.8,
         "carbohidratosAzucares": 0.4,
         "fibra": 3,
-        "proteinas": 13.0,
+        "proteinas": 13,
         "sal": 0.001,
-        "precio": 0.95
+        "precio": 0.95,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4003,
+        "idIngredient": 1106,
         "nameIngredient": "Preparado para bizcochos con levadura incorporada Hacendado",
         "peso": 1000,
         "medicion": "g",
@@ -1587,100 +1756,107 @@
         "fibra": 0,
         "proteinas": 10.1,
         "sal": 0.65,
-        "precio": 1.05
+        "precio": 1.05,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4004,
+        "idIngredient": 1107,
         "nameIngredient": "Chocolate negro fundir Hacendado",
         "peso": 200,
         "medicion": "g",
         "kcal": 529,
-        "grasas": 33.0,
-        "grasaSaturadas": 20.0,
-        "carbohidratos": 48.0,
-        "carbohidratosAzucares": 45.0,
+        "grasas": 33,
+        "grasaSaturadas": 20,
+        "carbohidratos": 48,
+        "carbohidratosAzucares": 45,
         "fibra": 9,
         "proteinas": 5.8,
         "sal": 0.1,
-        "precio": 0.9
+        "precio": 0.9,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4005,
+        "idIngredient": 1108,
         "nameIngredient": "Chocolate blanco fundir Hacendado",
         "peso": 200,
         "medicion": "g",
         "kcal": 549,
-        "grasas": 33.0,
-        "grasaSaturadas": 21.0,
-        "carbohidratos": 55.0,
-        "carbohidratosAzucares": 55.0,
+        "grasas": 33,
+        "grasaSaturadas": 21,
+        "carbohidratos": 55,
+        "carbohidratosAzucares": 55,
         "fibra": 0,
         "proteinas": 7.9,
         "sal": 0.3,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4006,
+        "idIngredient": 1109,
         "nameIngredient": "Chocolate negro 70% cacao fundir Hacendado 0% azúcares añadidos",
         "peso": 200,
         "medicion": "g",
         "kcal": 525,
-        "grasas": 42.0,
-        "grasaSaturadas": 26.0,
-        "carbohidratos": 35.0,
+        "grasas": 42,
+        "grasaSaturadas": 26,
+        "carbohidratos": 35,
         "carbohidratosAzucares": 0.1,
         "fibra": 10,
         "proteinas": 8.7,
-        "sal": 0.0,
-        "precio": 1.55
+        "sal": 0,
+        "precio": 1.55,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4007,
+        "idIngredient": 1110,
         "nameIngredient": "Chocolate con leche fundir Hacendado",
         "peso": 200,
         "medicion": "g",
         "kcal": 531,
-        "grasas": 31.0,
-        "grasaSaturadas": 19.0,
-        "carbohidratos": 54.0,
-        "carbohidratosAzucares": 52.0,
+        "grasas": 31,
+        "grasaSaturadas": 19,
+        "carbohidratos": 54,
+        "carbohidratosAzucares": 52,
         "fibra": 4,
         "proteinas": 8.3,
         "sal": 0.1,
-        "precio": 1.2
+        "precio": 1.2,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4008,
+        "idIngredient": 1111,
         "nameIngredient": "Masa de hojaldre sin gluten Hacendado",
         "peso": 280,
         "medicion": "g",
         "kcal": 346,
-        "grasas": 20.0,
+        "grasas": 20,
         "grasaSaturadas": 9.1,
-        "carbohidratos": 37.0,
-        "carbohidratosAzucares": 1.0,
+        "carbohidratos": 37,
+        "carbohidratosAzucares": 1,
         "fibra": 4,
         "proteinas": 2.5,
         "sal": 0.98,
-        "precio": 2.6
+        "precio": 2.6,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4009,
+        "idIngredient": 1112,
         "nameIngredient": "Masa fresca hojaldre Hacendado",
         "peso": 260,
         "medicion": "g",
         "kcal": 385,
-        "grasas": 21.0,
+        "grasas": 21,
         "grasaSaturadas": 10.6,
         "carbohidratos": 41.5,
         "carbohidratosAzucares": 2.6,
         "fibra": 0,
         "proteinas": 7.5,
         "sal": 1.1,
-        "precio": 2.4
+        "precio": 2.4,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4010,
+        "idIngredient": 1113,
         "nameIngredient": "Masa fresca Hacendado hojaldre con mantequilla",
         "peso": 260,
         "medicion": "g",
@@ -1690,192 +1866,205 @@
         "carbohidratos": 42.2,
         "carbohidratosAzucares": 1.4,
         "fibra": 0,
-        "proteinas": 7.0,
+        "proteinas": 7,
         "sal": 1.2,
-        "precio": 2.8
+        "precio": 2.8,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4011,
+        "idIngredient": 1114,
         "nameIngredient": "Masa fresca quebrada brisa Hacendado",
         "peso": 230,
         "medicion": "g",
         "kcal": 374,
-        "grasas": 21.0,
+        "grasas": 21,
         "grasaSaturadas": 8.8,
-        "carbohidratos": 39.0,
+        "carbohidratos": 39,
         "carbohidratosAzucares": 1.5,
         "fibra": 0,
         "proteinas": 6.1,
         "sal": 1.2,
-        "precio": 2.5
+        "precio": 2.5,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4012,
+        "idIngredient": 1115,
         "nameIngredient": "Masa fresca empanada Hacendado",
         "peso": 230,
         "medicion": "g",
         "kcal": 362,
         "grasas": 18.7,
         "grasaSaturadas": 9.1,
-        "carbohidratos": 43.0,
+        "carbohidratos": 43,
         "carbohidratosAzucares": 2.8,
         "fibra": 0,
         "proteinas": 5.4,
         "sal": 1.2,
-        "precio": 2.5
+        "precio": 2.5,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4013,
+        "idIngredient": 1116,
         "nameIngredient": "Masa filo Hacendado 8-10 hojas",
         "peso": 250,
         "medicion": "g",
         "kcal": 290,
         "grasas": 1.1,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 60.0,
-        "carbohidratosAzucares": 4.0,
+        "carbohidratos": 60,
+        "carbohidratosAzucares": 4,
         "fibra": 2,
-        "proteinas": 9.0,
+        "proteinas": 9,
         "sal": 0.75,
-        "precio": 1.9
+        "precio": 1.9,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4014,
+        "idIngredient": 1117,
         "nameIngredient": "Barra de pan 250g",
         "peso": 250,
         "medicion": "g",
         "kcal": 268,
         "grasas": 1.3,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 54.0,
+        "carbohidratos": 54,
         "carbohidratosAzucares": 2.7,
         "fibra": 3,
         "proteinas": 8.9,
         "sal": 1.6,
-        "precio": 0.45
+        "precio": 0.45,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4015,
+        "idIngredient": 1118,
         "nameIngredient": "Barra de pan rústica 500g",
         "peso": 500,
         "medicion": "g",
         "kcal": 272,
         "grasas": 0.9,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 56.0,
+        "carbohidratos": 56,
         "carbohidratosAzucares": 2.6,
         "fibra": 3,
         "proteinas": 8.4,
         "sal": 1.2,
-        "precio": 0.5
+        "precio": 0.5,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4016,
+        "idIngredient": 1119,
         "nameIngredient": "Baguette masa madre 250g",
         "peso": 250,
         "medicion": "g",
         "kcal": 267,
         "grasas": 1.1,
         "grasaSaturadas": 0.2,
-        "carbohidratos": 55.0,
+        "carbohidratos": 55,
         "carbohidratosAzucares": 2.6,
         "fibra": 3,
         "proteinas": 8.2,
         "sal": 1.3,
-        "precio": 0.5
+        "precio": 0.5,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4017,
+        "idIngredient": 1120,
         "nameIngredient": "Baguette sin gluten 175g",
         "peso": 175,
         "medicion": "g",
         "kcal": 255,
         "grasas": 9.5,
-        "grasaSaturadas": 1.0,
+        "grasaSaturadas": 1,
         "carbohidratos": 36.2,
         "carbohidratosAzucares": 2.3,
         "fibra": 8,
         "proteinas": 2.2,
         "sal": 1.11,
-        "precio": 2.1
+        "precio": 2.1,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4018,
+        "idIngredient": 1121,
         "nameIngredient": "Pan de molde blanco sin corteza Hacendado 450g",
         "peso": 450,
         "medicion": "g",
         "kcal": 225,
         "grasas": 2.1,
         "grasaSaturadas": 0.5,
-        "carbohidratos": 42.0,
+        "carbohidratos": 42,
         "carbohidratosAzucares": 3.9,
         "fibra": 3,
-        "proteinas": 8.0,
+        "proteinas": 8,
         "sal": 1.1,
-        "precio": 1.25
+        "precio": 1.25,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4019,
+        "idIngredient": 1122,
         "nameIngredient": "Pan de molde blanco Hacendado 460g",
         "peso": 460,
         "medicion": "g",
         "kcal": 249,
         "grasas": 2.1,
         "grasaSaturadas": 0.4,
-        "carbohidratos": 47.0,
+        "carbohidratos": 47,
         "carbohidratosAzucares": 3.9,
         "fibra": 3,
-        "proteinas": 9.0,
+        "proteinas": 9,
         "sal": 1.1,
-        "precio": 0.85
+        "precio": 0.85,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4020,
+        "idIngredient": 1123,
         "nameIngredient": "Pan de molde 100% integral Hacendado 460g",
         "peso": 460,
         "medicion": "g",
         "kcal": 238,
         "grasas": 3.2,
         "grasaSaturadas": 0.7,
-        "carbohidratos": 37.0,
+        "carbohidratos": 37,
         "carbohidratosAzucares": 3.3,
         "fibra": 7,
-        "proteinas": 11.0,
-        "sal": 1.0,
-        "precio": 0.95
+        "proteinas": 11,
+        "sal": 1,
+        "precio": 0.95,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4021,
+        "idIngredient": 1124,
         "nameIngredient": "Pan de molde sin gluten blanco Hacendado 440g",
         "peso": 440,
         "medicion": "g",
         "kcal": 250,
-        "grasas": 11.0,
-        "grasaSaturadas": 1.0,
-        "carbohidratos": 28.0,
+        "grasas": 11,
+        "grasaSaturadas": 1,
+        "carbohidratos": 28,
         "carbohidratosAzucares": 4.3,
         "fibra": 10,
         "proteinas": 4.3,
         "sal": 1.3,
-        "precio": 3.1
+        "precio": 3.1,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4022,
+        "idIngredient": 1125,
         "nameIngredient": "Tortillas de trigo Hacendado 360g",
         "peso": 360,
         "medicion": "g",
         "kcal": 302,
         "grasas": 5.4,
         "grasaSaturadas": 2.6,
-        "carbohidratos": 55.0,
+        "carbohidratos": 55,
         "carbohidratosAzucares": 2.2,
         "fibra": 2,
         "proteinas": 7.3,
         "sal": 1.7,
-        "precio": 1.3
+        "precio": 1.3,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4023,
+        "idIngredient": 1126,
         "nameIngredient": "Pan rallado Hacendado 750g",
         "peso": 750,
         "medicion": "g",
@@ -1887,10 +2076,11 @@
         "fibra": 4,
         "proteinas": 9.58,
         "sal": 1.025,
-        "precio": 0.75
+        "precio": 0.75,
+        "numberCategory": 4
     },
     {
-        "idIngredient": 4024,
+        "idIngredient": 1127,
         "nameIngredient": "Pan rallado con ajo y perejil Hacendado 500g",
         "peso": 500,
         "medicion": "g",
@@ -1902,6 +2092,7 @@
         "fibra": 7,
         "proteinas": 8.7,
         "sal": 1.02,
-        "precio": 0.9
+        "precio": 0.9,
+        "numberCategory": 4
     }
 ]

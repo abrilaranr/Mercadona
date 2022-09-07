@@ -35,25 +35,26 @@
           <div class="input col-md-6">
             <label for="">Nombre del ingrediente</label>
             <br />
-            <input type="text" id="nombre" />
+            <input type="text" id="nombre" placeholder="mínimo 3 caracteres"/>
           </div>
 
           <div class="input col-md-6">
             <label for="">Precio €</label>
             <br />
-            <input type="text" id="precio" />
+            <input type="number" id="precio" />
           </div>
 
           <div class="input col-md-6">
             <label for="">Cantidad del producto</label>
             <br />
-            <input type="text" id="medicion" />
+            <input type="number" id="cantidad" />
           </div>
 
           <div class="input col-md-6">
             <label for="">Unidad de medición</label>
             <br />
-            <select name="categorry" id="medicion" value="reposteria">
+            <select name="" id="medicion" value="">
+              <option value="0" selected hidden>---</option>
               <option value="gr">gr</option>
               <option value="ml">ml</option>
               <option value="und">und</option>
@@ -64,7 +65,8 @@
           <div class="input col-md-6">
             <label for="category">Categoría de la receta</label>
             <br />
-            <select name="categorry" id="category" value="reposteria">
+            <select name="category" id="categoria" value="">
+              <option value="0" selected hidden>Selecciona una categoría</option>
               <option value="1">Repostería</option>
               <option value="2">Carnes</option>
               <option value="3">Ensaladas</option>
