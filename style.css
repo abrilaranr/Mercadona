@@ -9961,7 +9961,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 section {
-  width: calc(100vw - 240px);
+  width: 100%;
   height: calc(100vh - 4rem);
   padding-top: 2rem;
   padding-right: 2rem;
@@ -10025,4 +10025,8 @@ aside {
 
 .card {
   width: 280px;
+}
+
+.nutrientes {
+  max-width: 500px;
 }/*# sourceMappingURL=style.css.map */
