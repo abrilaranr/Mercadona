@@ -25,10 +25,7 @@
       </div>
       <!-- Columna del botón de crear recetas -->
       <div class="col d-flex flex-row-reverse">
-        <a href="crearReceta.html">
-          <button type="button" class="btn">Crear receta</button>
-        </a>
-        
+        <button type="button" class="btn">Crear receta</button>
       </div>
     </nav>
 
@@ -51,12 +48,26 @@
           <br />
           <ul class="list-group">
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="sin-gluten">
-              <label class="form-check-label" for="firstCheckbox">Sin gluten</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="sin-gluten"
+              />
+              <label class="form-check-label" for="firstCheckbox"
+                >Sin gluten</label
+              >
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="sin-lactosa">
-              <label class="form-check-label" for="secondCheckbox">Sin lactosa</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="sin-lactosa"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Sin lactosa</label
+              >
             </li>
           </ul>
         </div>
@@ -67,31 +78,76 @@
           <br />
           <ul class="list-group" aria-label="type_recipe">
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="reposteria">
-              <label class="form-check-label" for="reposteria">Repostería</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="reposteria"
+              />
+              <label class="form-check-label" for="reposteria"
+                >Repostería</label
+              >
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="carnes">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="carnes"
+              />
               <label class="form-check-label" for="carnes">Carnes</label>
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="ensaladas">
-              <label class="form-check-label" for="thirdCheckbox">Ensaladas</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="ensaladas"
+              />
+              <label class="form-check-label" for="thirdCheckbox"
+                >Ensaladas</label
+              >
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="pescados">
-              <label class="form-check-label" for="secondCheckbox">Pescados</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pescados"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Pescados</label
+              >
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="sopas_y_cremas">
-              <label class="form-check-label" for="secondCheckbox">Sopas y Cremas</label>
-            </li>
-             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="salsas">
-              <label class="form-check-label" for="secondCheckbox">Salsas</label>
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="sopas_y_cremas"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Sopas y Cremas</label
+              >
             </li>
             <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="pasta">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="salsas"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Salsas</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pasta"
+              />
               <label class="form-check-label" for="secondCheckbox">Pasta</label>
             </li>
           </ul>
@@ -101,76 +157,207 @@
           <div class="row g-2">
             <div class="col-min">
               <div class="form-floating">
-                <input type="minPrice" class="form-control" id="minPrice" placeholder="min" value="0">
+                <input
+                  type="minPrice"
+                  class="form-control"
+                  id="minPrice"
+                  placeholder="min"
+                  value="0"
+                />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
-                  <input type="maxPrice" class="form-control" id="maxPrice" placeholder="max" value="0">
-                  <label for="maxPrice">Max</label>
-                </div>
+                <input
+                  type="maxPrice"
+                  class="form-control"
+                  id="maxPrice"
+                  placeholder="max"
+                  value="0"
+                />
+                <label for="maxPrice">Max</label>
+              </div>
             </div>
-            <div class="col-min">
-                
-            </div>
-              
+            <div class="col-min"></div>
           </div>
-
         </div>
-        
       </aside>
-     
+
       <!-- Sección de las recetas -->
+
       <section class="d-flex flex-column justify-content-between">
-        <article>
-          <div class="container-fluid text-center">
-            <div class="row d-flex justify-content-center">
-              <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="recipe-title">Card title</h5>
-                      <p class="card-text">Pequeña descripción de la receta</p>
-                      <label class="btn btn-primary">Kcal</label>
-                      <label class="btn btn-primary">Precio</label>
-                    </div>
+        <div class="container-fluid text-center">
+          <div class="row d-flex justify-content-center">
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
                   </div>
-              </div>
-              <div class="col">
-                
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="recipe-title">Card title</h5>
-                      <p class="card-text">Pequeña descripción de la receta</p>
-                      <label class="btn btn-primary">Kcal</label>
-                      <label class="btn btn-primary">Precio</label>
-                    </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
                   </div>
-                
-              <div class="col">
-                
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="recipe-title">Card title</h5>
-                      <p class="card-text">Pequeña descripción de la receta</p>
-                      <label class="btn btn-primary">Kcal</label>
-                      <label class="btn btn-primary">Precio</label>
-                    </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
                   </div>
-              
-              </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="card m-3">
+              <a href="#">
+                <img class="card-img" />
+                <div class="card-body">
+                  <p class="card-text">Ensalada cesar</p>
+                  <div class="d-flex justify-content-between">
+                    <p class="card-text">xxx kcal</p>
+                    <p class="card-text">xxx €</p>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
-            
-          
-        </article>
-        <!-- botones de guardar o eliminar -->
-        <article class="d-flex justify-content-between">
-          <button type="button" class="btn" onclick="deleteRecipe()">
-            Eliminar
-          </button>
-          <button type="button" class="btn" onclick="saveRecipe()">
-            Guardar
-          </button>
-        </article>
-        
+        </div>
+
       </section>
     </main>
   </body>
