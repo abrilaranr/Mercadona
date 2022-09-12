@@ -1,18 +1,41 @@
-const url = "recipes.json";
-let recipes;
 
-fetch(url)
-    .then(function (u) {
-        return u.json();
-    })
-    .then(function (json) {
-        recipes = json;
-    });
+    const url = "recipes.json";
+    let recipes;
+
+    // fetch(url)
+    //     .then(function (u) {
+    //         return u.json();
+    //     })
+    //     .then(function (json) {
+    //         jsondata = json;
+    //     });
+
+        
+
+
+
+async function fetchMoviesJSON() {
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    return jsonResponse;
+}
+fetchMoviesJSON().then(json => {
+    recipes = json;
+    loadRecipes(json)
+    // console.log(recipes)
+});
+
+
 
 function loadRecipes() {
+
+    // alert(jsondata)
+
     let out = document.getElementById('recipesOut');
+    out.innerHTML = '';
 
     for (let i = 0; i < recipes.length; i++) {
+        // alert('hola')
         out.innerHTML += `
 
         <div class="card m-3">
@@ -29,6 +52,7 @@ function loadRecipes() {
         </div>
         `;
     }
+    
 }
 
 
@@ -37,7 +61,8 @@ function sortRecipes(value) {
     // parseInt(value)
     switch (value) {
         case '1':
-            sort(recipes, 'price_recipe', false);
+            // sort(recipes, 'price_recipe', false);
+            pecioDescendente()
             break;
 
         case '2':
@@ -45,11 +70,15 @@ function sortRecipes(value) {
             break;
 
         case '3':
-            kcalAscendente();
+            // kcalAscendente();
+            alert('asdas')
+
             break;
 
         case '4':
-            kcalDescendente();
+            // kcalDescendente();
+            alert('sssssº')
+
 
             break;
 
@@ -76,33 +105,41 @@ function precioAscendente() {
         myArray.push(sorted[i]['id_recipe'])
     }
 
-
-
-    alert(myArray)
-
-}
-
-function mySort() {
+    // alert(JSON.stringify(sorted))
+    loadRecipes(sorted)
+    
 
 }
+
+//     alert(myArray)
+
+// }
+
+// function mySort() {
+
+// }
 
 function pecioDescendente() {
-    alert('chao')
-}
 
-function sort(object, value, toMax) {
-    let myArr = [];
+    let myArray = [];
+    let sorted =
+        recipes.sort(function (b, a) {
+            if (a.kcal_recipe < b.kcal_recipe) {
+                return 1;
+            }
+            if (a.kcal_recipe > b.kcal_recipe) {
+                return -1;
+            }
+            // a must be equal to b
+            return 0;
+        });
 
-    for (let i = 0; i < object.length; i++) {
-        myArr.push(recipes[i][value])
+    for (let i = 0; i < sorted.length; i++) {
+        myArray.push(sorted[i]['id_recipe'])
     }
 
-    myArr.sort();
-    if (toMax == false) {
-        myArr.reverse();
-    }
-
-    alert(myArr);
+    // alert(JSON.stringify(sorted))
+    loadRecipes(sorted)
 
 
 }

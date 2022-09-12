@@ -1,13 +1,24 @@
-const url = "ingredients.json";
-let jsondata;
+const url = "http://localhost:8080/api/allIngredients";
+let ingredients;
 
-fetch(url)
-    .then(function (u) {
-        return u.json();
-    })
-    .then(function (json) {
-        jsondata = json;
-    });
+// fetch(url)
+//     .then(function (u) {
+//         return u.json();
+//     })
+//     .then(function (json) {
+//         jsondata = json;
+//     });
+
+async function fetchMoviesJSON() {
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    return jsonResponse;
+}
+fetchMoviesJSON().then(json => {
+    ingredients = json;
+    printIngredients(json)
+    // console.log(recipes)
+});
 
 const ingredientCategories = [
     "aceites_especias_salsas",
@@ -28,7 +39,7 @@ function getCategoryById(ingredientCategoryId) {
     return ingredientCategories[ingredientCategoryId - 1];
 }
 
-function printIngredients() {
+function printIngredients(jsondata) {
     document.querySelector('#totalIngedients').innerHTML = jsondata.length;
     for (let i = 4; i < jsondata.length; i++) {
         document.querySelector(".table-ingredients > tbody").innerHTML += `
