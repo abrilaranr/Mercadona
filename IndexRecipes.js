@@ -19,11 +19,11 @@ function loadRecipes() {
         <div class="card m-3">
             <a href="#">
             <img class="card-img" />
-            <div class="card-body">
+            <div class="card-body"> 
                 <p class="card-text">`+ recipes[i]['name_recipe'] + `</p>
                 <div class="d-flex justify-content-between">
                 <p class="card-text">`+ recipes[i]['kcal_recipe'] + ` kcal</p>
-                <p class="card-text">`+ recipes[i]['price _recipe'] + ` €</p>
+                <p class="card-text">`+ recipes[i]['price_recipe'] + ` €</p>
                 </div>
             </div>
             </a>
