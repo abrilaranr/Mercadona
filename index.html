@@ -37,42 +37,20 @@
         <div class="input">
           <label for="category">Ordenar por</label>
           <br />
-          <select name="category" id="category">
-            <option value="precio_menor_a_mayor">menor a mayor precio</option>
-            <option value="precio_mayor_a_menor">mayor a menor precio</option>
-            <option value="kcal_menor_a_mayor">menor a mayor precio</option>
-            <option value="kcal_mayor_a_menor">mayor a menor precio</option>
+          <select
+            name="category"
+            id="category"
+            oninput="sortRecipes(this.value) "
+          >
+            <option value="0" selected>Ninguno</option>
+            <option value="1">menor a mayor precio</option>
+            <option value="2">mayor a menor precio</option>
+            <option value="3">menor a mayor precio</option>
+            <option value="4">mayor a menor precio</option>
           </select>
         </div>
         <!-- input de alergenos -->
-        <!-- <div class="input">
-          <label for="">Alérgenos</label>
-          <br />
-          <ul class="list-group">
-            <li class="list-group-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                value=""
-                id="sin-gluten"
-              />
-              <label class="form-check-label" for="firstCheckbox"
-                >Sin gluten</label
-              >
-            </li>
-            <li class="list-group-item">
-              <input
-                class="form-check-input me-1"
-                type="checkbox"
-                value=""
-                id="sin-lactosa"
-              />
-              <label class="form-check-label" for="secondCheckbox"
-                >Sin lactosa</label
-              >
-            </li>
-          </ul>
-        </div> -->
+        <!--   -->
 
         <!--Seleccionar categorías de la receta -->
         <div class="input">
