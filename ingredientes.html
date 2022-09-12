@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Proyecto final</title>
-    <script type="text/javascript" src="IndexRecipes.js"></script>
+    <script type="text/javascript" src="ingredients.js"></script>
   </head>
-  <body onload="loadRecipes()">
+  <body onload="printIngredients()">
     <!-- NAV -->
     <nav class="nav d-flex justify-content-between align-items-center">
       <!-- Columna del título -->
@@ -17,11 +17,11 @@
       </div>
       <!-- Columna de los botones -->
       <div class="col d-flex justify-content-center flex-row">
-        <a href="#" class="text-dark">Recetas</a>
+        <a href="#" class="text-dark">Información adicional</a>
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="ingredientes.html" class="text-dark">Ingredientes</a>
+        <a href="index.html" class="text-dark">Recetas</a>
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="#" class="text-dark">Información</a>
+        <a href="#" class="text-dark">Ingredientes</a>
       </div>
       <!-- Columna del botón de crear recetas -->
       <div class="col d-flex flex-row-reverse">
@@ -37,20 +37,13 @@
         <div class="input">
           <label for="category">Ordenar por</label>
           <br />
-          <select
-            name="category"
-            id="category"
-            oninput="sortRecipes(this.value) "
-          >
-            <option value="0" selected>Ninguno</option>
-            <option value="1">menor a mayor precio</option>
-            <option value="2">mayor a menor precio</option>
-            <option value="3">menor a mayor precio</option>
-            <option value="4">mayor a menor precio</option>
+          <select name="category" id="category">
+            <option value="precio_menor_a_mayor">menor a mayor precio</option>
+            <option value="precio_mayor_a_menor">mayor a menor precio</option>
+            <option value="kcal_menor_a_mayor">menor a mayor precio</option>
+            <option value="kcal_mayor_a_menor">mayor a menor precio</option>
           </select>
         </div>
-        <!-- input de alergenos -->
-        <!--   -->
 
         <!--Seleccionar categorías de la receta -->
         <div class="input">
@@ -65,7 +58,7 @@
                 id="reposteria"
               />
               <label class="form-check-label" for="reposteria"
-                >Repostería</label
+                >Aceites, especias y salsas</label
               >
             </li>
             <li class="list-group-item">
@@ -75,7 +68,7 @@
                 value=""
                 id="carnes"
               />
-              <label class="form-check-label" for="carnes">Carnes</label>
+              <label class="form-check-label" for="carnes">Aperitivos</label>
             </li>
             <li class="list-group-item">
               <input
@@ -85,7 +78,7 @@
                 id="ensaladas"
               />
               <label class="form-check-label" for="thirdCheckbox"
-                >Ensaladas</label
+                >Arroz, legumbres y pasta</label
               >
             </li>
             <li class="list-group-item">
@@ -96,7 +89,7 @@
                 id="pescados"
               />
               <label class="form-check-label" for="secondCheckbox"
-                >Pescados</label
+                >Panaderia</label
               >
             </li>
             <li class="list-group-item">
@@ -107,7 +100,7 @@
                 id="sopas_y_cremas"
               />
               <label class="form-check-label" for="secondCheckbox"
-                >Sopas y Cremas</label
+                >Marisco y pescado</label
               >
             </li>
             <li class="list-group-item">
@@ -118,7 +111,7 @@
                 id="salsas"
               />
               <label class="form-check-label" for="secondCheckbox"
-                >Salsas</label
+                >Huevos y lacteos</label
               >
             </li>
             <li class="list-group-item">
@@ -128,7 +121,51 @@
                 value=""
                 id="pasta"
               />
-              <label class="form-check-label" for="secondCheckbox">Pasta</label>
+              <label class="form-check-label" for="secondCheckbox"
+                >Fruta y verdura</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pasta"
+              />
+              <label class="form-check-label" for="secondCheckbox">Carne</label>
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pasta"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Cereales y galletas</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pasta"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >Conservas, caldos y cremas</label
+              >
+            </li>
+            <li class="list-group-item">
+              <input
+                class="form-check-input me-1"
+                type="checkbox"
+                value=""
+                id="pasta"
+              />
+              <label class="form-check-label" for="secondCheckbox"
+                >charcuteria y quesos</label
+              >
             </li>
           </ul>
         </div>
@@ -164,9 +201,42 @@
 
       <!-- Sección de las recetas -->
 
-      <section class="d-flex flex-column justify-content-between">
-        <div class="container-fluid text-center">
-          <div class="row d-flex justify-content-center" id="recipesOut"></div>
+      <section class="d-flex flex-column justify-content-start">
+        <h2>
+          <span id="totalIngedients" class="text-success fw-bold">99</span>
+          Ingredientes disponibles
+        </h2>
+
+        <div class="input">
+          <label for="">Busqueda</label>
+          <br />
+          <div></div>
+          <input type="text" />
+          <p class="mt-3">
+            ¿El ingrediente que estás buscando no está?
+            <a href="crearIngrediente.html">agrega uno personalizado aquí.</a>
+          </p>
+        </div>
+
+        <div class="container text-center">
+          <div class="d-flex justify-content-center col-12">
+            <table class="table table-ingredients">
+              <thead>
+                <tr class="">
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">€/peso</th>
+                  <th scope="col">
+                    Kcal
+                    <span class="fw-normal">(por cada 100gr/ml)</span>
+                  </th>
+                  <th>Categoría</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
       </section>
     </main>

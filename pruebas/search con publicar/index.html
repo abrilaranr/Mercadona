@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hola</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <main class="d-flex">
+      <section>
+        <!--Make sure the form has the autocomplete function switched off:-->
+        <form autocomplete="off" action="/action_page.php">
+<<<<<<< HEAD
+          <label for="">Nombre de receta</label><br />
+          <input
+            id="nombre_receta"
+            type="text"
+            placeholder="Nombre receta"
+          /><br /><br />
+          <label for="">categoría</label><br />
+=======
+          <label for="">Nombre de receta</label><br>
+          <input id="nombre_receta" type="text" placeholder="Nombre receta"><br><br>
+          <label for="">categoría</label><br>
+>>>>>>> 639a7535cca974abb82feec1dac4bf17b2d82cb1
+          <select name="" id="nombre_categoria">
+            <option value="1">reposteria</option>
+            <option value="2">carnes</option>
+            <option value="3">ensaladas</option>
+            <option value="4">pescados</option>
+            <option value="5">sopas_y_cremas</option>
+            <option value="6">salsas</option>
+<<<<<<< HEAD
+            <option value="7">pasta</option></select
+          ><br /><br />
+=======
+            <option value="7">pasta</option>
+          </select><br><br>
+>>>>>>> 639a7535cca974abb82feec1dac4bf17b2d82cb1
+          <div class="autocomplete" style="width: 300px">
+            <label for="">Buscar ingredientes</label>
+            <input
+              class="input"
+              id="myInput"
+              type="text"
+              name="myCountry"
+              placeholder=""
+            />
+          </div>
+        </form>
+
+        <!-- <h2 onclick="findIngredientById(1)">search by id 1</h2> -->
+        <table class="table" id="miTabla">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Ingrediente</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Kcal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td scope="row">
+                <img
+                  onclick="deleteIngr5e1dient(this.dataset.ingred1ie1ntId)"
+                  src="/icons/close-line.svg"
+                  alt=""
+                  data-ingredient-id="3"
+                />
+              </td>
+              <td
+                scope="row"
+                onload="getIngredientInfo('Leche condensada', this)"
+              >
+                Leche condensada
+              </td>
+              <td>
+                <div class="input-table">
+                  <input
+                    type="number"
+                    data-ingredient-id="3"
+                    oninput="calcIngredient(this.dataset.ingredientId, this.value)"
+                  />
+                  <label 
+                    for=""
+                    onload="getIngredientMeasure('Leche condensada', this)"
+                    >gr</label
+                  >
+                </div>
+              </td>
+              <td class="kcal" data-ingredient-id="3">726</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <span class="display-5">Tu receta tiene</span><br />
+        <span class="display-1" id="totalKcal">0 kcal</span><br />
+        <span class="display-5">y hacerla te costará</span><br />
+        <span class="display-1" id="totalPrice">0.00 €</span><br />
+        <br />
+        <ul>
+          <li id="grasas" class="d-flex align-items-center">
+            <div></div>
+            <span>Grasas: 0.0</span>
+          </li>
+          <li id="saturadas">
+            <div></div>
+            De las cuales saturadas: 0.0
+          </li>
+          <li id="carbohidratos">
+            <div></div>
+            Carbohidratos: 0.0
+          </li>
+          <li id="azucares">
+            <div></div>
+            De los cuales azúcares: 0.0
+          </li>
+          <li id="proteinas">
+            <div></div>
+            Proteínas: 0.0
+          </li>
+          <li id="fibras">
+            <div></div>
+            Fibras: 0.0
+          </li>
+          <li id="sal">
+            <div></div>
+            Sal: 0.0
+          </li>
+        </ul>
+
+        <canvas id="myChart" style="width: 100%; max-width: 600px">que</canvas>
+        <button onclick="publicar()">Subir receta</button>
+      </section>
+    </main>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

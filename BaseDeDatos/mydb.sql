@@ -33,7 +33,6 @@ SELECT * FROM ingredient_category;
 CREATE TABLE IF NOT EXISTS `mydb`.`recipe_category` (
   `id_recipe_category` INT NOT NULL auto_increment UNIQUE,
   `name_recipe_category` VARCHAR(45) UNIQUE,
-  image_recipe_category VARCHAR(500),
   PRIMARY KEY (`id_recipe_category`));
   
 
@@ -62,8 +61,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`recipes` (
   `id_recipe` INT NOT NULL AUTO_INCREMENT UNIQUE,
   `name_recipe` VARCHAR(45) NULL UNIQUE,
   `id_recipe_category` INT,
-  price_recipe INT,
-  kcal_recipe INT,
   FOREIGN KEY (id_recipe_category) references recipe_category (id_recipe_category),
   PRIMARY KEY (`id_recipe`));
 
@@ -76,14 +73,14 @@ CREATE TABLE IF NOT EXISTS `mydb`.`new_recipes` (
 
   PRIMARY KEY (`recipes_id_recipe`));
 
-INSERT INTO recipe_category(id_recipe_category,name_recipe_category, image_recipe_category) VALUES
-(null, "reposteria", "https://corbuse.edu.mx/blog/wp-content/uploads/2021/11/Haz-un-diplomado-en-reposteria.jpg"),
-(null, "carnes", "https://static2.abc.es/media/bienestar/2021/09/27/tipos-de-carne-1-kWj--620x349@abc.jpg"),
-(null, "ensaladas", "https://www.comedera.com/wp-content/uploads/2021/01/ensaladas-diferentes.jpg"),
-(null, "pescados", "https://ichef.bbci.co.uk/news/640/cpsprodpb/3214/production/_92502821_pescadovarios.jpg"),
-(null, "sopas_y_cremas", "https://static2.elcorreo.com/www/pre2017/multimedia/noticias/201701/24/media/cortadas/sopas-kClE-U211614812540xJD-575x380@El%20Correo.jpg"),
-(null, "salsas", "https://imagenes.20minutos.es/files/image_990_v3/uploads/imagenes/2022/08/04/salsas.jpeg"),
-(null, "pasta", "https://www.hogarmania.com/archivos/201401/tipos-de-pasta-xl-668x400x80xX.jpg");
+INSERT INTO recipe_category(id_recipe_category,name_recipe_category) VALUES
+(null, "reposteria"),
+(null, "carnes"),
+(null, "ensaladas"),
+(null, "pescados"),
+(null, "sopas_y_cremas"),
+(null, "salsas"),
+(null, "pasta");
 
 INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, grasas, grasas_saturadas, carbohidratos, carbohidratos_azucares, fibra, proteinas, sal, precio, number_categories) VALUES 
 (null,"Aceite de Oliva Virgen extra, Hacendado", 1000, "ml", 822, 91.0, 13.0, 0, 0, 0, 0, 0, 4.25, 1),
@@ -300,8 +297,7 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 
 
 INSERT INTO recipes(id_recipe,name_recipe,id_recipe_category) VALUES
-(1, "Arroz a la cubana", 7),
-(null, "Bacalao con verduras", 4);
+(1, "Arroz a la cubana", 7);
 
 INSERT INTO new_recipes(recipes_id_recipe,id_new_recipes, ingredients_id_ingredient, cantidad_ingredient) VALUES
 (1, 1, 70, 500),
