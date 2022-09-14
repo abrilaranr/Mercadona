@@ -1,13 +1,23 @@
-const url = "ingredients.json";
+const url = "http://localhost:8080/api/allIngredients";
 let jsondata;
 
-fetch(url)
-    .then(function (u) {
-        return u.json();
-    })
-    .then(function (json) {
-        jsondata = json;
-    });
+// fetch(url)
+//     .then(function (u) {
+//         return u.json();
+//     })
+//     .then(function (json) {
+//         jsondata = json;
+//     });
+
+async function fetchMoviesJSON() {
+    const response = await fetch(url);
+    const jsonResponse = await response.json();
+    return jsonResponse;
+}
+fetchMoviesJSON().then(json => {
+    jsondata = json;
+    // console.log(recipes)
+});
 
 function setClass(elemento) {
     elemento.setAttribute("class", "searchOption");
@@ -55,7 +65,7 @@ function findIngredientById(ingredientId) {
 function autocomplete(inp, arr) {
     // crea la array de nombres de items del osrs
 
-    fetch("ingredients.json")
+    fetch("http://localhost:8080/api/allIngredients")
         .then((response) => response.json())
         .then((data) => setPrice(data));
 
@@ -283,7 +293,7 @@ function addIngredient(ingredientId) {
      <tr data-ingredient-id="`+ ingredientId + `" class="ingredientRow">
         <td>
         <img
-            src="icons/close-line.svg"
+            src="/icons/close-line.svg"
             alt="eliminar"
             data-ingredient-id="`+ ingredientId + `"
             onclick="deleteIngredient(this.dataset.ingredientId)"
