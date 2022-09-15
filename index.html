@@ -58,9 +58,10 @@
           <ul class="list-group" aria-label="type_recipe">
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="1"
                 id="reposteria"
               />
               <label class="form-check-label" for="reposteria"
@@ -69,18 +70,20 @@
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="2"
                 id="carnes"
               />
               <label class="form-check-label" for="carnes">Carnes</label>
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="3"
                 id="ensaladas"
               />
               <label class="form-check-label" for="thirdCheckbox"
@@ -89,9 +92,10 @@
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="4"
                 id="pescados"
               />
               <label class="form-check-label" for="secondCheckbox"
@@ -100,9 +104,10 @@
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="5"
                 id="sopas_y_cremas"
               />
               <label class="form-check-label" for="secondCheckbox"
@@ -111,9 +116,10 @@
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="6"
                 id="salsas"
               />
               <label class="form-check-label" for="secondCheckbox"
@@ -122,9 +128,10 @@
             </li>
             <li class="list-group-item">
               <input
+                name = "categories"
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
+                value="7"
                 id="pasta"
               />
               <label class="form-check-label" for="secondCheckbox">Pasta</label>
@@ -135,14 +142,14 @@
           <label class=""> Precio </label>
           <div class="row g-2">
             <div class="col-min">
-              <div class="form-floating">
+              <div class="form-floating" >
                 <input
                   type="minPrice"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
                   value="0"
-                />
+                  />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
@@ -155,6 +162,8 @@
                 />
                 <label for="maxPrice">Max</label>
               </div>
+              <div></div>
+              <button type="button" class="btn" onclick="pricesBetween()">Validar filtro</button>
             </div>
             <div class="col-min"></div>
           </div>

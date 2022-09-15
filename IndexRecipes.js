@@ -123,7 +123,7 @@ function pecioDescendente() {
 
     let myArray = [];
     let sorted =
-        recipes.sort(function (b, a) {
+        recipes.sort(function (a, b) {
             if (a.kcal_recipe < b.kcal_recipe) {
                 return 1;
             }
@@ -145,8 +145,31 @@ function pecioDescendente() {
 }
 
 
+function pricesBetween(){
 
+    let minPrice = document.getElementById('minPrice').value
+    let maxPrice = document.getElementById('maxPrice').value
+    let sorted = recipes;
+    let myArray = [];
+            for (let i = 0; i < sorted.length; i++) {
+            if (sorted[i].price_recipe >= minPrice && sorted[i].price_recipe <= maxPrice) {
+                console.log('holi');
+                
+                myArray.push(sorted[i]['id_recipe'])
+                
 
+                
+            }};
+
+        // recipes.sort(function(a,b){
+        // if (a.price_recipe >= minPrice && b.price_recipe <= maxPrice) {
+        // }
+        // return 1;})
+        sorted = [];
+        sorted = myArray;
+        console.log(sorted);
+        loadRecipes(sorted)
+    }
 
 /* <div class="card m-3">
     <a href="#">
@@ -167,6 +190,6 @@ function pecioDescendente() {
 
 
 
-
+//javascript display non conditional
 
 
