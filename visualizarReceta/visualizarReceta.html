@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <title>Proyecto final</title>
+  </head>
+
+  <!-- <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+     <title>Proyecto final</title>
+  </head> -->
+
+  <body>
+    <!-- NAV -->
+    <nav class="nav d-flex justify-content-between align-items-center">
+      <!-- Columna del título -->
+      <div class="col">
+        <a href="index.html">
+          <span class="logo fw-light"> menut </span>
+        </a>
+      </div>
+      <!-- Columna de los botones -->
+      <div class="col d-flex justify-content-center flex-row">
+        <a href="/index.html" class="text-dark">Recetas</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="/createIngrident/crearIngrediente.html" class="text-dark">Ingredientes</a>
+        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <a href="#" class="text-dark">Información</a>
+      </div>
+      <!-- Columna del botón de crear recetas -->
+      <div class="col d-flex flex-row-reverse">
+        <button type="button" class="btn">Crear receta</button>
+      </div>
+    </nav>
+    <main class="d-flex flex-row">
+      <!-- Sección de la izquierda de la mitad de la pantalla -->
+      <section>
+        <!-- input de Nombre -->
+        <div class="input">
+          <label for="">Nombre de la receta</label>
+          <br />
+          <input type="text" id="nombre_receta" />
+        </div>
+
+        <!-- Input del select de categoría de la receta -->
+        <div class="input">
+          <label for="category">Categoría de la receta</label>
+          <br />
+          <select name="categorry" id="nombre_categoria" value="reposteria">
+            <option value="0" selected hidden></option>
+            <option value="1">Reposteria</option>
+            <option value="2">Carnes</option>
+            <option value="3">Ensaladas</option>
+            <option value="4">Pescados</option>
+            <option value="5">Sopas y cremas</option>
+            <option value="6">Salsas</option>
+            <option value="7">Pasta</option>
+          </select>
+        </div>
+
+        <!-- Input de agregar ingredientes -->
+        <div class="input">
+          <label for="">Buscar ingredientes</label>
+          <br />
+          <input type="text" id="myInput" />
+          <p class="mt-3">
+            ¿El ingrediente que estás buscando no está?
+            <a href="crearIngrediente.html">agrega uno personalizado aquí.</a>
+          </p>
+        </div>
+
+        <!-- Tabla de nutrientes -->
+        <table class="table" id="miTabla">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Ingrediente</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Kcal</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <!-- Segunda sección de la derecha de la otra mitad de la pantalla -->
+      <section
+        class="d-flex flex-column justify-content-between container-fluid"
+      >
+        <article class="text-center row">
+          <span class="text-lg">tu receta tiene</span><br />
+          <span class="text-xl font-weight-bold" id="totalKcal">0 kcal</span
+          ><br />
+          <span class="text-lg">y hacerla te costará</span><br />
+          <span class="text-xl font-weight-bold" id="totalPrice">0.00€</span>
+        </article>
+        <p>
+          Estos datos son aproximados ya pueden variar mucho según la cocción de
+          la receta, por lo que se calculan en crudo
+        </p>
+        <article>
+          <div id="nutrientes">
+            <li id="grasas" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              <span>Grasas: 0.0</span>
+            </li>
+            <li id="saturadas" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              De las cuales saturadas: 0.0
+            </li>
+            <li id="carbohidratos" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              Carbohidratos: 0.0
+            </li>
+            <li id="azucares" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              De los cuales azúcares: 0.0
+            </li>
+            <li id="proteinas" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              Proteínas: 0.0
+            </li>
+            <li id="fibras" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              Fibras: 0.0
+            </li>
+            <li id="sal" class="d-flex align-items-center mb-2">
+              <div class="me-2"></div>
+              Sal: 0.0
+            </li>
+          </div>
+        </article>
+        <canvas id="myChart" style="width: 100%; max-width: 600px">que</canvas>
+        <!-- botones de guardar o eliminar -->
+        <article class="d-flex justify-content-between">
+          <button type="button" class="btn" onclick="deleteRecipe()">
+            Eliminar
+          </button>
+          <button type="button" class="btn" onclick="publicar()">
+            Guardar
+          </button>
+        </article>
+      </section>
+    </main>
+    <script type="text/javascript" src="createRecipe.js"></script>
+  </body>
+</html>

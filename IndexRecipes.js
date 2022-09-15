@@ -39,7 +39,7 @@ function loadRecipes() {
         out.innerHTML += `
 
         <div class="card m-3">
-            <a href="#">
+            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+recipes[i]['id_recipe']+`">
             <img class="card-img" />
             <div class="card-body"> 
                 <p class="card-text">`+ recipes[i]['name_recipe'] + `</p>
