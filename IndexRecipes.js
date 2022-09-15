@@ -192,34 +192,44 @@ function kcalDescendente() {
 
 
 function pricesBetween(){
-
-    let minPrice = document.getElementById('minPrice').value
-    let maxPrice = document.getElementById('maxPrice').value
+    let minPrice = document.getElementById('minPrice').value;
+    let maxPrice = document.getElementById('maxPrice').value;
     let sorted = recipes;
     let myArray = [];
-            for (let i = 0; i < sorted.length; i++) {
-            if (sorted[i].price_recipe >= minPrice && sorted[i].price_recipe <= maxPrice) {
-                console.log('holi');
-                
-                myArray.push(sorted[i]['id_recipe'])
-                
-
-                
-            }};
-
-        // recipes.sort(function(a,b){
-        // if (a.price_recipe >= minPrice && b.price_recipe <= maxPrice) {
-        // }
-        // return 1;})
-        sorted = [];
+    for (const sortedElement of sorted) {
+        if(sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice){
+            myArray.push(sortedElement);
+            console.log(sortedElement);
+        }
+    }
+        console.log(myArray);
         sorted = myArray;
         console.log(sorted);
-        loadRecipes(sorted)
+        loadRecipesPrices(sorted);
     }
 
 
 
+    // FUNCTION FOR LOAD RECIPES FOR PRICES
+    function loadRecipesPrices(sorted) {
+        // alert(jsondata)
+        let out = document.getElementById('recipesOut');    
 
-//javascript display non conditional
-
-
+        out.innerHTML = '';   
+        
+        for (const sortedElement of sorted) {
+            out.innerHTML += `
+            <div class="card m-3">
+                <a href="#">
+                <img class="card-img" />
+                <div class="card-body"> 
+                    <p class="card-text">`+ sortedElement.name_recipe + `</p>
+                    <div class="d-flex justify-content-between">
+                    <p class="card-text">`+ sortedElement.kcal_recipe + ` kcal</p>
+                    <p class="card-text">`+ sortedElement.price_recipe + ` €</p>
+                    </div>
+                </div>
+                </a>
+            </div>`;
+        }
+    }
