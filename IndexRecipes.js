@@ -169,7 +169,7 @@ function kcalDescendente() {
 
     let myArray = [];
     let sorted =
-        recipes.sort(function (b, a) {
+        recipes.sort(function (a, b) {
             if (a.kcal_recipe < b.kcal_recipe) {
                 return 1;
             }
@@ -191,12 +191,45 @@ function kcalDescendente() {
 }
 
 
+function pricesBetween(){
+    let minPrice = document.getElementById('minPrice').value;
+    let maxPrice = document.getElementById('maxPrice').value;
+    let sorted = recipes;
+    let myArray = [];
+    for (const sortedElement of sorted) {
+        if(sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice){
+            myArray.push(sortedElement);
+            console.log(sortedElement);
+        }
+    }
+        console.log(myArray);
+        sorted = myArray;
+        console.log(sorted);
+        loadRecipesPrices(sorted);
+    }
 
 
 
+    // FUNCTION FOR LOAD RECIPES FOR PRICES
+    function loadRecipesPrices(sorted) {
+        // alert(jsondata)
+        let out = document.getElementById('recipesOut');    
 
-
-
-
-
-
+        out.innerHTML = '';   
+        
+        for (const sortedElement of sorted) {
+            out.innerHTML += `
+            <div class="card m-3">
+                <a href="#">
+                <img class="card-img" />
+                <div class="card-body"> 
+                    <p class="card-text">`+ sortedElement.name_recipe + `</p>
+                    <div class="d-flex justify-content-between">
+                    <p class="card-text">`+ sortedElement.kcal_recipe + ` kcal</p>
+                    <p class="card-text">`+ sortedElement.price_recipe + ` €</p>
+                    </div>
+                </div>
+                </a>
+            </div>`;
+        }
+    }

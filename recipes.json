@@ -1,6 +1,6 @@
 [
     {
-        "id_recipe": 1,
+        "id_recipe": 11,
         "name_recipe": "Pizza",
         "id_recipe_category": 1,
         "price_recipe": 1.3,
@@ -42,7 +42,7 @@
         }
     },
     {
-        "id_recipe": 1,
+        "id_recipe": 4,
         "name_recipe": "Wok de ternera",
         "id_recipe_category": 1,
         "price_recipe": 1.83,
@@ -56,7 +56,7 @@
         }
     },
     {
-        "id_recipe": 2,
+        "id_recipe": 5,
         "name_recipe": "Arróz tres delicias",
         "id_recipe_category": 1,
         "price_recipe": 1.35,
@@ -71,7 +71,7 @@
         }
     },
     {
-        "id_recipe": 3,
+        "id_recipe": 6,
         "name_recipe": "Ensaladilla rusa",
         "id_recipe_category": 1,
         "price_recipe": 0.65,
