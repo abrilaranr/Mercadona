@@ -28,9 +28,9 @@
       <!-- Columna de los botones -->
       <div class="col d-flex justify-content-center flex-row">
         <a href="/index.html" class="text-dark">Recetas</a>
-        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
         <a href="/createIngrident/crearIngrediente.html" class="text-dark">Ingredientes</a>
-        <img src="Icons/Line 5.svg" alt="" class="mx-3" />
+        <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
         <a href="#" class="text-dark">Información</a>
       </div>
       <!-- Columna del botón de crear recetas -->
@@ -41,39 +41,11 @@
     <main class="d-flex flex-row">
       <!-- Sección de la izquierda de la mitad de la pantalla -->
       <section>
-        <!-- input de Nombre -->
-        <div class="input">
-          <label for="">Nombre de la receta</label>
-          <br />
-          <input type="text" id="nombre_receta" />
-        </div>
-
-        <!-- Input del select de categoría de la receta -->
-        <div class="input">
-          <label for="category">Categoría de la receta</label>
-          <br />
-          <select name="categorry" id="nombre_categoria" value="reposteria">
-            <option value="0" selected hidden></option>
-            <option value="1">Reposteria</option>
-            <option value="2">Carnes</option>
-            <option value="3">Ensaladas</option>
-            <option value="4">Pescados</option>
-            <option value="5">Sopas y cremas</option>
-            <option value="6">Salsas</option>
-            <option value="7">Pasta</option>
-          </select>
-        </div>
-
-        <!-- Input de agregar ingredientes -->
-        <div class="input">
-          <label for="">Buscar ingredientes</label>
-          <br />
-          <input type="text" id="myInput" />
-          <p class="mt-3">
-            ¿El ingrediente que estás buscando no está?
-            <a href="crearIngrediente.html">agrega uno personalizado aquí.</a>
-          </p>
-        </div>
+        <span id="nombre">nombre</span><br>
+        <span id="categoria">categoría</span><br>
+        <span>ingredientes</span><br>
+        <span id="output">put</span>
+        
 
         <!-- Tabla de nutrientes -->
         <table class="table" id="miTabla">
@@ -147,6 +119,6 @@
         </article>
       </section>
     </main>
-    <script type="text/javascript" src="createRecipe.js"></script>
+    <script type="text/javascript" src="visualizarReceta.js"></script>
   </body>
 </html>
