@@ -1,16 +1,16 @@
 
-    const url = "recipes.json";
-    let recipes;
+const url = "recipes.json";
+let recipes;
 
-    // fetch(url)
-    //     .then(function (u) {
-    //         return u.json();
-    //     })
-    //     .then(function (json) {
-    //         jsondata = json;
-    //     });
+// fetch(url)
+//     .then(function (u) {
+//         return u.json();
+//     })
+//     .then(function (json) {
+//         jsondata = json;
+//     });
 
-        
+
 
 
 
@@ -39,7 +39,7 @@ function loadRecipes() {
         out.innerHTML += `
 
         <div class="card m-3">
-            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+recipes[i]['id_recipe']+`">
+            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ recipes[i]['id_recipe'] + `">
             <img class="card-img" />
             <div class="card-body"> 
                 <p class="card-text">`+ recipes[i]['name_recipe'] + `</p>
@@ -52,7 +52,7 @@ function loadRecipes() {
         </div>
         `;
     }
-    
+
 }
 
 
@@ -105,7 +105,7 @@ function precioAscendente() {
 
     // alert(JSON.stringify(sorted))
     loadRecipes(sorted)
-    
+
 
 }
 

@@ -29,7 +29,9 @@
       <div class="col d-flex justify-content-center flex-row">
         <a href="/index.html" class="text-dark">Recetas</a>
         <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="/createIngrident/crearIngrediente.html" class="text-dark">Ingredientes</a>
+        <a href="/createIngrident/crearIngrediente.html" class="text-dark"
+          >Ingredientes</a
+        >
         <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
         <a href="#" class="text-dark">Información</a>
       </div>
@@ -41,17 +43,13 @@
     <main class="d-flex flex-row">
       <!-- Sección de la izquierda de la mitad de la pantalla -->
       <section>
-        <span id="nombre">nombre</span><br>
-        <span id="categoria">categoría</span><br>
-        <span>ingredientes</span><br>
-        <span id="output">put</span>
-        
+        <span id="nombre">nombre</span><br />
+        <span id="categoria">categoría</span><br />
 
         <!-- Tabla de nutrientes -->
         <table class="table" id="miTabla">
           <thead>
             <tr>
-              <th scope="col"></th>
               <th scope="col">Ingrediente</th>
               <th scope="col">Cantidad</th>
               <th scope="col">Kcal</th>
@@ -65,7 +63,7 @@
         class="d-flex flex-column justify-content-between container-fluid"
       >
         <article class="text-center row">
-          <span class="text-lg">tu receta tiene</span><br />
+          <span class="text-lg">Esta receta tiene</span><br />
           <span class="text-xl font-weight-bold" id="totalKcal">0 kcal</span
           ><br />
           <span class="text-lg">y hacerla te costará</span><br />
@@ -109,14 +107,7 @@
         </article>
         <canvas id="myChart" style="width: 100%; max-width: 600px">que</canvas>
         <!-- botones de guardar o eliminar -->
-        <article class="d-flex justify-content-between">
-          <button type="button" class="btn" onclick="deleteRecipe()">
-            Eliminar
-          </button>
-          <button type="button" class="btn" onclick="publicar()">
-            Guardar
-          </button>
-        </article>
+        <article class="d-flex justify-content-between"></article>
       </section>
     </main>
     <script type="text/javascript" src="visualizarReceta.js"></script>
