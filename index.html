@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" > </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Proyecto final</title>
   </head>
   <body>
@@ -19,7 +19,9 @@
       <div class="col d-flex justify-content-center flex-row">
         <a href="#" class="text-dark">Recetas</a>
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="/Ingredientes/ingredientes.html" class="text-dark">Ingredientes</a>
+        <a href="/Ingredientes/ingredientes.html" class="text-dark"
+          >Ingredientes</a
+        >
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
         <a href="#" class="text-dark">Información</a>
       </div>
@@ -59,7 +61,7 @@
           <ul class="list-group" aria-label="type_recipe">
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="1"
@@ -71,7 +73,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="2"
@@ -81,7 +83,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="3"
@@ -93,7 +95,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="4"
@@ -105,7 +107,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="5"
@@ -117,7 +119,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="6"
@@ -129,7 +131,7 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="7"
@@ -143,14 +145,14 @@
           <label class=""> Precio </label>
           <div class="row g-2">
             <div class="col-min">
-              <div class="form-floating" >
+              <div class="form-floating">
                 <input
                   type="minPrice"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
                   value="0"
-                  />
+                />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
@@ -164,19 +166,32 @@
                 <label for="maxPrice">Max</label>
               </div>
             </div>
-        </div>
-        <div class="col-min"></div>
-        <div class="input">
-              <div class="input">
-              <button type="button" class="btn" id="pricesButton" onclick="pricesBetween()">Validar filtro</button>
-              </div>              
-              <div class="input">
-              <button type="button" class="btn" id="showall" onclick="loadRecipes()">Mostrar todas las recetas</button>
-              </div>
-        </div>    
-        <div class="col-min"></div>
           </div>
-        
+          <div class="col-min"></div>
+          <div class="input">
+            <div class="input">
+              <button
+                type="button"
+                class="btn"
+                id="pricesButton"
+                onclick="pricesBetween()"
+              >
+                Validar filtro
+              </button>
+            </div>
+            <div class="input">
+              <button
+                type="button"
+                class="btn"
+                id="showall"
+                onclick="loadRecipes()"
+              >
+                Mostrar todas las recetas
+              </button>
+            </div>
+          </div>
+          <div class="col-min"></div>
+        </div>
       </aside>
 
       <!-- Sección de las recetas -->
