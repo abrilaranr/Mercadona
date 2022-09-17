@@ -173,14 +173,14 @@
           <label class=""> Precio </label>
           <div class="row g-2">
             <div class="col-min">
-              <div class="form-floating">
+              <div class="form-floating" >
                 <input
                   type="minPrice"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
                   value="0"
-                />
+                  />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
@@ -189,14 +189,23 @@
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="0"
+                  value="10"
                 />
                 <label for="maxPrice">Max</label>
               </div>
             </div>
-            <div class="col-min"></div>
-          </div>
         </div>
+        <div class="col-min"></div>
+        <div class="input">
+              <div class="input">
+              <button type="button" class="btn" id="pricesButton" onclick="pricesBetweenIngredients()">Validar filtro</button>
+              </div>              
+              <div class="input">
+              <button type="button" class="btn" id="showall" onclick="loadIngredientsPrices()">Mostrar todas las recetas</button>
+              </div>
+        </div>    
+        <div class="col-min"></div>
+          </div>
       </aside>
 
       <!-- Sección de las recetas -->
