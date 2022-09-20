@@ -4,22 +4,35 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="/style.css" />
         <title>Proyecto final</title>
         <script type="text/javascript" src="script.js"></script>
     </head>
     <body>    
         <nav class="nav d-flex justify-content-between align-items-center">
             <div class="col">
-                <span class="logo"> menut </span>
+                <a href="/index.html">
+                    <span class="logo fw-normal"> menut </span>
+                </a>
+                
               </div>
-            <div class="col d-flex justify-content-center flex-row">
-                <a href="./informacion.html" class="text-dark">Información adicional</a>
-                <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-                <a href="./index.html" class="text-dark">Recetas</a>
-                <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-                <a href="#" class="text-dark">Ingredientes</a>
-            </div>
+              <div class="col d-flex justify-content-center flex-row">
+                <a href="/index.html" class="text-dark">Recetas</a>
+                <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
+                <a href="/Ingredientes/ingredientes.html" class="text-dark"
+                  >Ingredientes</a
+                >
+                <img src="/Icons/Line 5.svg" alt="" class="mx-3" />
+                <a href="/informacion/informacion.html" class="text-dark"
+                  >Información</a
+                >
+              </div>
+
+              <div class="col d-flex flex-row-reverse">
+                <a href="/crearReceta/crearReceta.html">
+                  <button type="button" class="btn">Crear receta</button>
+                </a>
+              </div>
         </nav>
         <main class="informacion">
             <h1> Menut, nuestro proyecto</h1>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" > </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Proyecto final</title>
   </head>
   <body>
@@ -13,15 +13,21 @@
     <nav class="nav d-flex justify-content-between align-items-center">
       <!-- Columna del título -->
       <div class="col">
-        <span class="logo"> menut </span>
+        <a href="index.html">
+          <span class="logo fw-light"> menut </span>
+        </a>
       </div>
       <!-- Columna de los botones -->
       <div class="col d-flex justify-content-center flex-row">
         <a href="#" class="text-dark">Recetas</a>
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="/Ingredientes/ingredientes.html" class="text-dark">Ingredientes</a>
+        <a href="/Ingredientes/ingredientes.html" class="text-dark"
+          >Ingredientes</a
+        >
         <img src="Icons/Line 5.svg" alt="" class="mx-3" />
-        <a href="#" class="text-dark">Información</a>
+        <a href="/informacion/informacion.html" class="text-dark"
+          >Información</a
+        >
       </div>
       <!-- Columna del botón de crear recetas -->
       <div class="col d-flex flex-row-reverse">
@@ -59,11 +65,12 @@
           <ul class="list-group" aria-label="type_recipe">
             <li class="list-group-item">
               <input
-                name = "categories"
-                class="form-check-input me-1"
+                name="categories"
+                class="form-check-input me-1 cat"
                 type="checkbox"
                 value="1"
                 id="reposteria"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="reposteria"
                 >Repostería</label
@@ -71,21 +78,23 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
-                class="form-check-input me-1"
+                name="categories"
+                class="form-check-input me-1 cat"
                 type="checkbox"
                 value="2"
                 id="carnes"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="carnes">Carnes</label>
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="3"
                 id="ensaladas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="thirdCheckbox"
                 >Ensaladas</label
@@ -93,11 +102,12 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="4"
                 id="pescados"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Pescados</label
@@ -105,11 +115,12 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="5"
                 id="sopas_y_cremas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Sopas y Cremas</label
@@ -117,11 +128,12 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="6"
                 id="salsas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Salsas</label
@@ -129,11 +141,12 @@
             </li>
             <li class="list-group-item">
               <input
-                name = "categories"
+                name="categories"
                 class="form-check-input me-1"
                 type="checkbox"
                 value="7"
                 id="pasta"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox">Pasta</label>
             </li>
@@ -143,40 +156,43 @@
           <label class=""> Precio </label>
           <div class="row g-2">
             <div class="col-min">
-              <div class="form-floating" >
+              <div class="form-floating">
                 <input
-                  type="minPrice"
+                  type="number"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
                   value="0"
-                  />
+                  oninput="pricesBetween()"
+                />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
                 <input
-                  type="maxPrice"
+                  type="number"
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="10"
+                  value="0"
+                  oninput="pricesBetween()"
                 />
                 <label for="maxPrice">Max</label>
               </div>
             </div>
-        </div>
-        <div class="col-min"></div>
-        <div class="input">
-              <div class="input">
-              <button type="button" class="btn" id="pricesButton" onclick="pricesBetween()">Validar filtro</button>
-              </div>              
-              <div class="input">
-              <button type="button" class="btn" id="showall" onclick="loadRecipes()">Mostrar todas las recetas</button>
-              </div>
-        </div>    
-        <div class="col-min"></div>
           </div>
-        
+          <div class="col-min"></div>
+          <div class="input">
+            <button
+              type="button"
+              class="btn"
+              id="showall"
+              onclick="loadRecipes()"
+            >
+              Mostrar todas las recetas
+            </button>
+          </div>
+          <div class="col-min"></div>
+        </div>
       </aside>
 
       <!-- Sección de las recetas -->

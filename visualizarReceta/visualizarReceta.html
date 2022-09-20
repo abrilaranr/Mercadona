@@ -39,53 +39,21 @@
       </div>
       <!-- Columna del botón de crear recetas -->
       <div class="col d-flex flex-row-reverse">
-        <button type="button" class="btn" disabled>Crear receta</button>
+        <a href="/crearReceta/crearReceta.html">
+          <button type="button" class="btn">Crear receta</button>
+        </a>
       </div>
     </nav>
     <main class="d-flex flex-row">
       <!-- Sección de la izquierda de la mitad de la pantalla -->
       <section>
-        <!-- input de Nombre -->
-        <div class="input">
-          <label for="">Nombre de la receta</label>
-          <br />
-          <input type="text" id="nombre_receta" />
-        </div>
-
-        <!-- Input del select de categoría de la receta -->
-        <div class="input">
-          <label for="category">Categoría de la receta</label>
-          <br />
-          <select name="categorry" id="nombre_categoria" value="reposteria">
-            <option value="0" selected hidden></option>
-            <option value="1">Reposteria</option>
-            <option value="2">Carnes</option>
-            <option value="3">Ensaladas</option>
-            <option value="4">Pescados</option>
-            <option value="5">Sopas y cremas</option>
-            <option value="6">Salsas</option>
-            <option value="7">Pasta</option>
-          </select>
-        </div>
-
-        <!-- Input de agregar ingredientes -->
-        <div class="input">
-          <label for="">Buscar ingredientes</label>
-          <br />
-          <input type="text" id="myInput" />
-          <p class="mt-3">
-            ¿El ingrediente que estás buscando no está?
-            <a href="/crearIngrediente/crearIngrediente.html"
-              >agrega uno personalizado aquí.</a
-            >
-          </p>
-        </div>
+        <span id="nombre">nombre</span><br />
+        <span id="categoria">categoría</span><br />
 
         <!-- Tabla de nutrientes -->
         <table class="table" id="miTabla">
           <thead>
             <tr>
-              <th scope="col"></th>
               <th scope="col">Ingrediente</th>
               <th scope="col">Cantidad</th>
               <th scope="col">Kcal</th>
@@ -99,7 +67,7 @@
         class="d-flex flex-column justify-content-between container-fluid"
       >
         <article class="text-center row">
-          <span class="text-lg">tu receta tiene</span><br />
+          <span class="text-lg">Esta receta tiene</span><br />
           <span class="text-xl font-weight-bold" id="totalKcal">0 kcal</span
           ><br />
           <span class="text-lg">y hacerla te costará</span><br />
@@ -143,16 +111,9 @@
         </article>
         <canvas id="myChart" style="width: 100%; max-width: 600px">que</canvas>
         <!-- botones de guardar o eliminar -->
-        <article class="d-flex justify-content-between">
-          <button type="button" class="btn" onclick="deleteRecipe()">
-            Eliminar
-          </button>
-          <button type="button" class="btn" onclick="publicar()">
-            Guardar
-          </button>
-        </article>
+        <article class="d-flex justify-content-between"></article>
       </section>
     </main>
-    <script type="text/javascript" src="createRecipe.js"></script>
+    <script type="text/javascript" src="visualizarReceta.js"></script>
   </body>
 </html>
