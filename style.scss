@@ -16,6 +16,9 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1320px
 );
+
+
+
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
 
 // Este font es solo para el logo, nos e utilizará para nada más
@@ -24,8 +27,19 @@ $container-max-widths: (
     src: url(fonts/Galada-Regular.ttf);
 }
 
+@font-face {
+    font-family: myFont;
+    // src: url(fonts/DidactGothic-Regular.ttf);
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+aside li{
+    // background-color: #06D6A0;
+}
+
 *{
     color: #073B4C;
+    font-family: myFont;
 }
 
 a{

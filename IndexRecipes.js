@@ -2,18 +2,6 @@
 const url = "recipes.json";
 let recipes;
 
-// fetch(url)
-//     .then(function (u) {
-//         return u.json();
-//     })
-//     .then(function (json) {
-//         jsondata = json;
-//     });
-
-
-
-
-
 async function fetchMoviesJSON() {
     const response = await fetch(url);
     const jsonResponse = await response.json();
@@ -56,12 +44,10 @@ function loadRecipes() {
 }
 
 
-
 function sortRecipes(value) {
     // parseInt(value)
     switch (value) {
         case '1':
-            // sort(recipes, 'price_recipe', false);
             precioDescendente()
             break;
 
@@ -71,19 +57,17 @@ function sortRecipes(value) {
 
         case '3':
             kcalAscendente();
-
             break;
 
         case '4':
             kcalDescendente();
-
-
             break;
 
 
     }
 
 }
+
 
 function precioAscendente() {
     let myArray = [];
@@ -136,7 +120,6 @@ function precioDescendente() {
 }
 
 
-
 function kcalAscendente() {
 
     let myArray = [];
@@ -161,8 +144,6 @@ function kcalAscendente() {
 
 
 }
-
-
 
 
 function kcalDescendente() {
@@ -191,34 +172,32 @@ function kcalDescendente() {
 }
 
 
-function pricesBetween(){
+function pricesBetween() {
     let minPrice = document.getElementById('minPrice').value;
     let maxPrice = document.getElementById('maxPrice').value;
     let sorted = recipes;
     let myArray = [];
     for (const sortedElement of sorted) {
-        if(sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice){
+        if (sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice) {
             myArray.push(sortedElement);
             console.log(sortedElement);
         }
     }
-        console.log(myArray);
-        sorted = myArray;
-        console.log(sorted);
-        loadRecipesPrices(sorted);
-    }
+    console.log(myArray);
+    sorted = myArray;
+    console.log(sorted);
+    loadRecipesPrices(sorted);
+}
 
+// FUNCTION FOR LOAD RECIPES FOR PRICES
+function loadRecipesPrices(sorted) {
+    // alert(jsondata)
+    let out = document.getElementById('recipesOut');
 
+    out.innerHTML = '';
 
-    // FUNCTION FOR LOAD RECIPES FOR PRICES
-    function loadRecipesPrices(sorted) {
-        // alert(jsondata)
-        let out = document.getElementById('recipesOut');    
-
-        out.innerHTML = '';   
-        
-        for (const sortedElement of sorted) {
-            out.innerHTML += `
+    for (const sortedElement of sorted) {
+        out.innerHTML += `
             <div class="card m-3">
                 <a href="#">
                 <img class="card-img" />
@@ -231,5 +210,37 @@ function pricesBetween(){
                 </div>
                 </a>
             </div>`;
+    }
+}
+
+
+function actualizar() {
+    let cehcked = document.querySelectorAll('aside ul li input:checked')
+    let filtered = [];
+    let out = document.getElementById('recipesOut');
+    out.innerHTML = '';
+    for (let i = 0; i < cehcked.length; i++) {
+        for (let j = 0; j < recipes.length; j++) {
+            if (cehcked[i].value == recipes[j]['id_recipe_category']) {
+                filtered.push(recipes[j])
+
+
+
+            }
         }
     }
+
+
+
+    // Si ninguna checkbox está marcada, imprime todas las recetas para no dejarlo vacío
+    if (document.querySelectorAll('aside ul li input:checked').length == 0) {
+        loadRecipesPrices(recipes)
+    } else {
+        loadRecipesPrices(filtered)
+    }
+
+
+
+
+
+}

@@ -66,10 +66,11 @@
             <li class="list-group-item">
               <input
                 name="categories"
-                class="form-check-input me-1"
+                class="form-check-input me-1 cat"
                 type="checkbox"
                 value="1"
                 id="reposteria"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="reposteria"
                 >Repostería</label
@@ -78,10 +79,11 @@
             <li class="list-group-item">
               <input
                 name="categories"
-                class="form-check-input me-1"
+                class="form-check-input me-1 cat"
                 type="checkbox"
                 value="2"
                 id="carnes"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="carnes">Carnes</label>
             </li>
@@ -92,6 +94,7 @@
                 type="checkbox"
                 value="3"
                 id="ensaladas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="thirdCheckbox"
                 >Ensaladas</label
@@ -104,6 +107,7 @@
                 type="checkbox"
                 value="4"
                 id="pescados"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Pescados</label
@@ -116,6 +120,7 @@
                 type="checkbox"
                 value="5"
                 id="sopas_y_cremas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Sopas y Cremas</label
@@ -128,6 +133,7 @@
                 type="checkbox"
                 value="6"
                 id="salsas"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox"
                 >Salsas</label
@@ -140,6 +146,7 @@
                 type="checkbox"
                 value="7"
                 id="pasta"
+                onclick="actualizar()"
               />
               <label class="form-check-label" for="secondCheckbox">Pasta</label>
             </li>
@@ -151,21 +158,23 @@
             <div class="col-min">
               <div class="form-floating">
                 <input
-                  type="minPrice"
+                  type="number"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
                   value="0"
+                  oninput="pricesBetween()"
                 />
                 <label for="minPrice">Min</label>
               </div>
               <div class="form-floating">
                 <input
-                  type="maxPrice"
+                  type="number"
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="10"
+                  value="0"
+                  oninput="pricesBetween()"
                 />
                 <label for="maxPrice">Max</label>
               </div>
@@ -173,26 +182,14 @@
           </div>
           <div class="col-min"></div>
           <div class="input">
-            <div class="input">
-              <button
-                type="button"
-                class="btn"
-                id="pricesButton"
-                onclick="pricesBetween()"
-              >
-                Validar filtro
-              </button>
-            </div>
-            <div class="input">
-              <button
-                type="button"
-                class="btn"
-                id="showall"
-                onclick="loadRecipes()"
-              >
-                Mostrar todas las recetas
-              </button>
-            </div>
+            <button
+              type="button"
+              class="btn"
+              id="showall"
+              onclick="loadRecipes()"
+            >
+              Mostrar todas las recetas
+            </button>
           </div>
           <div class="col-min"></div>
         </div>
