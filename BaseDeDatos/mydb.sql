@@ -293,7 +293,11 @@ INSERT INTO ingredients (id_ingredient, name_ingredient, peso, medicion, kcal, g
 	(null, "Salvado de avena Hacendado con 16% de fibra", 400, "g", 359, 8.7, 1.6, 44.1, 1.4, 16.5, 17.6, 0.01, 1.15, 9),
 	(null, "Cereales y semillas granola Hacendado con frutos secos bajo en azúcar", 400, "g", 477, 22.7, 3.5, 50.2, 4.7, 8.5, 13.6, 0.02, 2.05, 9),
 	(null, "Queso semicurado mezcla Hacendado", 420, "g", 421, 35, 25, 1.6, 0.5, 0.0, 25, 1.7, 3.49, 11),
-	(null, "Queso tierno mezcla Hacendado", 350, "g", 372, 32, 19, 0.5, 0.5, 0.0, 21, 1.4, 2.66, 11);
+	(null, "Queso tierno mezcla Hacendado", 350, "g", 372, 32, 19, 0.5, 0.5, 0.0, 21, 1.4, 2.66, 11),
+    (null, "Fusilli 100% lentejas rojas Felicia", 250, "g", 334, 1.7, 0.4, 50, 1.2, 7.6, 26, 0.01, 1.70, 3),
+	(null, "Espinacas cortadas", 350, "g", 17, 0.4, 0.06, 3.6, 0.4, 2.2, 2.9, 0.2, 1.15, 7),
+	(null, "Queso en polvo grana padano Hacendado", 100, "g", 398, 29, 18, 0.0, 0.0, 0.0, 33, 1.5, 1.70, 11),
+	(null, "Queso Feta mezcla Hacendado en dados", 150, "g", 277, 23.2, 16.4, 1.0, 0.0, 0.0, 16, 2.2, 2.10, 11);
 
 
 INSERT INTO recipes(id_recipe,name_recipe,id_recipe_category) VALUES
