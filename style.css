@@ -9978,6 +9978,11 @@ section:first-of-type {
   background-color: #F6F8F9;
 }
 
+section:nth-of-type(2) {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
 .input {
   margin-bottom: 2rem;
 }
@@ -10020,7 +10025,7 @@ table {
 }
 
 aside {
-  width: 240px;
+  width: 360px;
   padding-top: 2rem;
   padding-right: 2rem;
   padding-left: 2rem;
@@ -10053,7 +10058,6 @@ aside {
 }
 
 li > div {
-  background-color: #06D6A0;
   width: 1rem;
   height: 1rem;
   border-radius: 1rem;

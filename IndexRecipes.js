@@ -1,7 +1,7 @@
 
 const url = "recipes.json";
-let recipes;
 let filteredRecipe
+let recipes;
 
 async function fetchMoviesJSON() {
     const response = await fetch(url);
@@ -9,40 +9,70 @@ async function fetchMoviesJSON() {
     return jsonResponse;
 }
 fetchMoviesJSON().then(json => {
-    recipes = json;
-    loadRecipes(json)
+    // recipes = json;
+    // localStorage.setItem('recipes', JSON.stringify(json));
+
+
+    if (localStorage.getItem('recipes') == null) {
+        window.localStorage.setItem("recipes", JSON.stringify(json));
+        recipes = JSON.parse(localStorage.getItem('recipes'));
+    } else {
+        recipes = JSON.parse(localStorage.getItem('recipes'));
+    }
+
+
+    loadRecipes(recipes)
     // console.log(recipes)
 });
 
 
 
-function loadRecipes() {
 
+// FUNCTION FOR LOAD RECIPES FOR PRICES
+function loadRecipes(sorted) {
     // alert(jsondata)
-
     let out = document.getElementById('recipesOut');
     out.innerHTML = '';
 
-    for (let i = 0; i < recipes.length; i++) {
-        // alert('hola')
-        out.innerHTML += `
+    if (sorted.length == 0) {
+        document.getElementById('totalIngedients').innerHTML = 0
+        out.innerHTML = 'No se encontraron resultados';
 
-        <div class="card m-3">
-            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ recipes[i]['id_recipe'] + `">
-            <img class="card-img" />
-            <div class="card-body"> 
-                <p class="card-text">`+ recipes[i]['name_recipe'] + `</p>
-                <div class="d-flex justify-content-between">
-                <p class="card-text">`+ recipes[i]['kcal_recipe'] + ` kcal</p>
-                <p class="card-text">`+ recipes[i]['price_recipe'] + ` €</p>
-                </div>
-            </div>
-            </a>
-        </div>
-        `;
+    } else {
+        document.getElementById('totalIngedients').innerHTML = sorted.length
+
+        // out.innerHTML = `<h2>
+        //   <span id="totalIngedients" class="text-success fw-bold">`+ sorted.length + `</span>
+        //   Recetas disponibles
+        // </h2>`
+
+        for (const sortedElement of sorted) {
+            out.innerHTML += `
+                <div class="card m-3">
+                <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ sortedElement.id_recipe + `">
+                    <img class="card-img" />
+                    <div class="card-body"> 
+                        <p class="card-text text-lg mb-5">`+ sortedElement.name_recipe + `</p>
+                        <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <p class="card-text fw-normal">`+ sortedElement.kcal_recipe + ` kcal</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="card-text fw-normal">`+ sortedElement.price_recipe + ` €</p>
+
+                        </div>
+
+                        
+                        </div>
+                    </div>
+                    </a>
+                </div>`;
+        }
     }
 
+
 }
+
 
 
 function sortRecipes() {
@@ -189,36 +219,6 @@ function pricesBetween() {
 
 }
 
-// FUNCTION FOR LOAD RECIPES FOR PRICES
-function loadRecipesPrices(sorted) {
-    // alert(jsondata)
-    let out = document.getElementById('recipesOut');
-    out.innerHTML = '';
-
-    if (sorted.length == 0) {
-        out.innerHTML = 'No se encontraron resultados';
-
-    } else {
-
-        for (const sortedElement of sorted) {
-            out.innerHTML += `
-                <div class="card m-3">
-                <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ sortedElement.id_recipe + `">
-                    <img class="card-img" />
-                    <div class="card-body"> 
-                        <p class="card-text">`+ sortedElement.name_recipe + `</p>
-                        <div class="d-flex justify-content-between">
-                        <p class="card-text">`+ sortedElement.kcal_recipe + ` kcal</p>
-                        <p class="card-text">`+ sortedElement.price_recipe + ` €</p>
-                        </div>
-                    </div>
-                    </a>
-                </div>`;
-        }
-    }
-
-
-}
 
 
 function filterByCategory() {
@@ -252,5 +252,5 @@ function actualizar() {
     filterByCategory()
     pricesBetween()
     sortRecipes()
-    loadRecipesPrices(filteredRecipe)
+    loadRecipes(filteredRecipe)
 }

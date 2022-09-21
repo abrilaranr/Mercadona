@@ -202,18 +202,18 @@ function publicar() {
     alert('subiendo...');
 
 
-    // const options = {
-    //     method: 'POST',
-    //     body: JSON.stringify(ingredientObject),
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // }
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(ingredientObject),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
 
-    // var d = "";
-    // fetch('http://localhost:8080/api/add', options)
-    //     .then(res => res.json(d))
-    //     .then(res => console.log(res));
+    var d = "";
+    fetch('http://localhost:8080/api/addIngredient', options)
+        .then(res => res.json(d))
+        .then(res => console.log(res));
 
 }
 
