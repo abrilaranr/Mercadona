@@ -10089,4 +10089,20 @@ li {
 
 #sal > div {
   background-color: #168AAD;
+}
+
+.fondo {
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ventana {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1rem;
 }/*# sourceMappingURL=style.css.map */

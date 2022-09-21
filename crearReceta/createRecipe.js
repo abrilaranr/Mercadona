@@ -587,4 +587,31 @@ function publicar() {
 
 
 
+function deleteRecipe() {
 
+    document.body.innerHTML += `
+            <div class="fondo position-absolute">
+            <div
+                class="ventana d-flex flex-column justify-content-center align-items-center"
+            >
+                <span class="mb-4 text-lg fw-bold"
+                >¿Seguro que quieres borrar la receta?</span
+                >
+                <span class="mb-4 text-md">Tus cambios no se guardarán</span>
+                <div class="d-flex justify-content-between w-100">
+                    <button class="btn" onclick="location.reload();">
+                        Eliminar
+                    </button>
+                    <button
+                        class="btn"
+                        onclick="document.getElementsByClassName('fondo')[0].remove()"
+                    >
+                        Conservar
+                    </button>
+                </div>
+            </div>
+        </div>
+    `
+
+
+}

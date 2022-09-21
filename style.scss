@@ -190,6 +190,8 @@ table{
     border-radius: 1rem;
 }
 
+
+
 aside{
     width: 240px;
     // height: calc(100vh - 4rem);
@@ -263,4 +265,24 @@ li{
 }
 #sal>div{
     background-color: #168AAD;
+}
+
+
+
+
+// mensaje emergente
+.fondo{
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana{
+padding: 2rem;
+background-color: white;
+border-radius: 1rem;
 }

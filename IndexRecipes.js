@@ -1,6 +1,7 @@
 
 const url = "recipes.json";
 let recipes;
+let filteredRecipe
 
 async function fetchMoviesJSON() {
     const response = await fetch(url);
@@ -175,7 +176,7 @@ function kcalDescendente() {
 function pricesBetween() {
     let minPrice = document.getElementById('minPrice').value;
     let maxPrice = document.getElementById('maxPrice').value;
-    let sorted = recipes;
+    let sorted = filteredRecipe;
     let myArray = [];
     for (const sortedElement of sorted) {
         if (sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice) {
@@ -199,7 +200,7 @@ function loadRecipesPrices(sorted) {
     for (const sortedElement of sorted) {
         out.innerHTML += `
             <div class="card m-3">
-                <a href="#">
+            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ sortedElement.id_recipe + `">
                 <img class="card-img" />
                 <div class="card-body"> 
                     <p class="card-text">`+ sortedElement.name_recipe + `</p>
@@ -214,7 +215,7 @@ function loadRecipesPrices(sorted) {
 }
 
 
-function actualizar() {
+function filterByCategory() {
     let cehcked = document.querySelectorAll('aside ul li input:checked')
     let filtered = [];
     let out = document.getElementById('recipesOut');
@@ -223,24 +224,31 @@ function actualizar() {
         for (let j = 0; j < recipes.length; j++) {
             if (cehcked[i].value == recipes[j]['id_recipe_category']) {
                 filtered.push(recipes[j])
-
-
-
             }
         }
     }
 
 
 
-    // Si ninguna checkbox está marcada, imprime todas las recetas para no dejarlo vacío
-    if (document.querySelectorAll('aside ul li input:checked').length == 0) {
-        loadRecipesPrices(recipes)
-    } else {
-        loadRecipesPrices(filtered)
-    }
+
+    filteredRecipe = filtered;
+    alert(filteredRecipe)
 
 
 
 
 
+
+}
+
+
+
+
+
+
+function actualizar() {
+    filterByCategory()
+    pricesBetween()
+    // sortRecipes(value)
+    loadRecipesPrices(filteredRecipe)
 }
