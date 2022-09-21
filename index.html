@@ -43,16 +43,12 @@
         <div class="input">
           <label for="category">Ordenar por</label>
           <br />
-          <select
-            name="category"
-            id="category"
-            oninput="sortRecipes(this.value) "
-          >
+          <select name="category" id="category" oninput="actualizar()">
             <option value="0" selected>Ninguno</option>
-            <option value="1">menor a mayor precio</option>
-            <option value="2">mayor a menor precio</option>
-            <option value="3">menor a mayor precio</option>
-            <option value="4">mayor a menor precio</option>
+            <option value="1">Precio ascendiente</option>
+            <option value="2">Precio descendiente</option>
+            <option value="3">Kcal ascendiente</option>
+            <option value="4">Kcal descendiente</option>
           </select>
         </div>
         <!-- input de alergenos -->
@@ -63,7 +59,7 @@
           <label for="">Categorías</label>
           <br />
           <ul class="list-group" aria-label="type_recipe">
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1 cat"
@@ -76,7 +72,7 @@
                 >Repostería</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1 cat"
@@ -87,7 +83,7 @@
               />
               <label class="form-check-label" for="carnes">Carnes</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1"
@@ -96,11 +92,9 @@
                 id="ensaladas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="thirdCheckbox"
-                >Ensaladas</label
-              >
+              <label class="form-check-label" for="ensaladas">Ensaladas</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1"
@@ -109,11 +103,9 @@
                 id="pescados"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >Pescados</label
-              >
+              <label class="form-check-label" for="pescados">Pescados</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1"
@@ -122,11 +114,11 @@
                 id="sopas_y_cremas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="sopas_y_cremas"
                 >Sopas y Cremas</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1"
@@ -135,11 +127,9 @@
                 id="salsas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >Salsas</label
-              >
+              <label class="form-check-label" for="salsas">Salsas</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 name="categories"
                 class="form-check-input me-1"
@@ -148,33 +138,33 @@
                 id="pasta"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox">Pasta</label>
+              <label class="form-check-label" for="pasta">Pasta</label>
             </li>
           </ul>
         </div>
         <div class="input">
           <label class=""> Precio </label>
           <div class="row g-2">
-            <div class="col-min">
-              <div class="form-floating">
+            <div class="d-flex justify-content-between">
+              <div class="form-floating me-2">
                 <input
                   type="number"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
-                  value="0"
-                  oninput="pricesBetween()"
+                  value=""
+                  oninput="actualizar()"
                 />
                 <label for="minPrice">Min</label>
               </div>
-              <div class="form-floating">
+              <div class="form-floating ms-2">
                 <input
                   type="number"
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="0"
-                  oninput="pricesBetween()"
+                  value=""
+                  oninput="actualizar()"
                 />
                 <label for="maxPrice">Max</label>
               </div>
@@ -182,14 +172,14 @@
           </div>
           <div class="col-min"></div>
           <div class="input">
-            <button
+            <!-- <button
               type="button"
               class="btn"
               id="showall"
               onclick="loadRecipes()"
             >
               Mostrar todas las recetas
-            </button>
+            </button> -->
           </div>
           <div class="col-min"></div>
         </div>
@@ -198,7 +188,11 @@
       <!-- Sección de las recetas -->
 
       <section class="d-flex flex-column justify-content-between">
-        <div class="container-fluid text-center">
+        <div class="container-fluid">
+          <h2>
+            <span id="totalIngedients" class="text-success fw-bold">---</span>
+            Recetas disponibles
+          </h2>
           <div class="row d-flex justify-content-center" id="recipesOut"></div>
         </div>
       </section>

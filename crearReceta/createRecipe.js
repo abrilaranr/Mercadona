@@ -1,13 +1,13 @@
 const url = "http://localhost:8080/api/allIngredients";
 let jsondata;
 
-// fetch(url)
-//     .then(function (u) {
-//         return u.json();
-//     })
-//     .then(function (json) {
-//         jsondata = json;
-//     });
+fetch(url)
+    .then(function (u) {
+        return u.json();
+    })
+    .then(function (json) {
+        jsondata = json;
+    });
 
 async function fetchMoviesJSON() {
     const response = await fetch(url);
@@ -25,6 +25,24 @@ function setClass(elemento) {
 
 
 
+const url2 = "/recipes.json";
+let filteredRecipe
+let recipes;
+
+async function fetchMovies2JSON() {
+    const response = await fetch(url2);
+    const jsonResponse = await response.json();
+    return jsonResponse;
+}
+fetchMovies2JSON().then(json => {
+    // recipes = json;
+    // localStorage.setItem('recipes', JSON.stringify(json));
+    // window.localStorage.setItem("recipes", JSON.stringify(json));
+    recipes = JSON.parse(localStorage.getItem('recipes'));
+    // console.log(recipes)
+});
+
+
 
 
 // Encontrar el objeto completo del ingrediente por id
@@ -36,11 +54,6 @@ function findIngredientById(ingredientId) {
         }
     }
 }
-
-
-
-
-
 
 
 
@@ -400,6 +413,7 @@ function actualizar() {
 
     var totalPrice = 0;
     var totalKcal = 0;
+
     let totalGrasas = 0;
     let totalSaturadas = 0;
     let totalCarbohidratos = 0;
@@ -466,8 +480,8 @@ function actualizar() {
 
     `;
 
-    price.innerHTML = totalPrice.toFixed(2) + ' €';
-    kcal.innerHTML = totalKcal + ' kcal';
+    price.innerHTML = totalPrice.toFixed(2);
+    kcal.innerHTML = totalKcal;
     // grasas.innerHTML = "Grasas: " + totalGrasas.toFixed(1);
     // saturadas.innerHTML = "De las cuales saturadas: " + totalSaturadas.toFixed(1);
     // carbohidratos.innerHTML = "Carbohidratos: " + totalCarbohidratos.toFixed(1);
@@ -545,39 +559,64 @@ function publicar() {
     let nombre = document.getElementById('nombre_receta').value;
     let categoria = document.getElementById('nombre_categoria').value;
     let ingredientsRows = document.querySelectorAll('input[data-ingredient-id]');
+    let precio = parseFloat(document.getElementById('totalPrice').innerHTML);
+    let kcal = parseInt(document.getElementById('totalKcal').innerHTML);
 
     let recetaObjeto = {}
-    let ingredientes = {}
+    let ingredientes = []
 
+    recetaObjeto["id_recipe"] = (recipes.length) + 1;
     recetaObjeto["name_recipe"] = nombre;
-    recetaObjeto["id_recipe_category"] = categoria;
-
+    recetaObjeto["id_recipe_category"] = parseInt(categoria);
+    recetaObjeto["price_recipe"] = precio;
+    recetaObjeto["kcal_recipe"] = kcal;
 
     // agregar ingrediente por ingrediente
     for (let i = 0; i < ingredientsRows.length; i++) {
         let ingredientQuantity = ingredientsRows[i].value;
         let ingredienteId = ingredientsRows[i].dataset.ingredientId;
+        let ingredienteObjeto = {};
 
-        ingredientes[ingredienteId] = ingredientQuantity;
+        ingredienteObjeto['id_ingredient'] = ingredienteId;
+        ingredienteObjeto['quantity'] = ingredientQuantity;
+
+        ingredientes.push(ingredienteObjeto)
 
     }
 
     recetaObjeto["ingredients"] = ingredientes;
-    alert(JSON.stringify(recetaObjeto));
 
 
-    const options = {
-        method: 'POST',
-        body: JSON.stringify(recetaObjeto),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }
+    recipes.push(recetaObjeto);
 
-    var d = "";
-    fetch('http://localhost:8080/api/add', options)
-        .then(res => res.json(d))
-        .then(res => console.log(res));
+    window.localStorage.setItem("recipes", JSON.stringify(recipes));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const options = {
+    //     method: 'POST',
+    //     body: JSON.stringify(recetaObjeto),
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // }
+
+    // var d = "";
+    // fetch('http://localhost:8080/api/add', options)
+    //     .then(res => res.json(d))
+    //     .then(res => console.log(res));
 
 }
 
@@ -587,4 +626,31 @@ function publicar() {
 
 
 
+function deleteRecipe() {
 
+    document.body.innerHTML += `
+            <div class="fondo position-absolute">
+            <div
+                class="ventana d-flex flex-column justify-content-center align-items-center"
+            >
+                <span class="mb-4 text-lg fw-bold"
+                >¿Seguro que quieres borrar la receta?</span
+                >
+                <span class="mb-4 text-md">Tus cambios no se guardarán</span>
+                <div class="d-flex justify-content-between w-100">
+                    <button class="btn" onclick="location.reload();">
+                        Eliminar
+                    </button>
+                    <button
+                        class="btn"
+                        onclick="document.getElementsByClassName('fondo')[0].remove()"
+                    >
+                        Conservar
+                    </button>
+                </div>
+            </div>
+        </div>
+    `
+
+
+}

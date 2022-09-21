@@ -33,9 +33,6 @@ $container-max-widths: (
     src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
-aside li{
-    // background-color: #06D6A0;
-}
 
 *{
     color: #073B4C;
@@ -131,6 +128,11 @@ section:first-of-type{
     background-color: #F6F8F9;
 }
 
+section:nth-of-type(2){
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
 // Input se refiere a cualquier tipo de input que sean tipo text o select
 .input{
     margin-bottom: 2rem;
@@ -190,8 +192,10 @@ table{
     border-radius: 1rem;
 }
 
+
+
 aside{
-    width: 240px;
+    width: 360px;
     // height: calc(100vh - 4rem);
     padding-top: 2rem;
     padding-right: 2rem;
@@ -232,7 +236,6 @@ aside{
 
 
 li > div{
-    background-color: #06D6A0;
     width: 1rem;
     height: 1rem;
     border-radius: 1rem;
@@ -264,3 +267,24 @@ li{
 #sal>div{
     background-color: #168AAD;
 }
+
+
+
+
+// mensaje emergente
+.fondo{
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventana{
+padding: 2rem;
+background-color: white;
+border-radius: 1rem;
+}
+

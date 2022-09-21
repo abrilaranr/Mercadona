@@ -47,14 +47,14 @@
     <main class="d-flex flex-row">
       <!-- Sección de la izquierda de la mitad de la pantalla -->
       <section>
-        <span id="nombre">nombre</span><br />
+        <span id="nombre" class="text-xl fw-bold">nombre</span><br />
         <span id="categoria">categoría</span><br />
 
         <!-- Tabla de nutrientes -->
-        <table class="table" id="miTabla">
+        <table class="table mt-5" id="miTabla">
           <thead>
             <tr>
-              <th scope="col">Ingrediente</th>
+              <th scope="col">Ingredientes</th>
               <th scope="col">Cantidad</th>
               <th scope="col">Kcal</th>
             </tr>
@@ -77,39 +77,46 @@
           Estos datos son aproximados ya pueden variar mucho según la cocción de
           la receta, por lo que se calculan en crudo
         </p>
-        <article>
-          <div id="nutrientes">
-            <li id="grasas" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              <span>Grasas: 0.0</span>
-            </li>
-            <li id="saturadas" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              De las cuales saturadas: 0.0
-            </li>
-            <li id="carbohidratos" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              Carbohidratos: 0.0
-            </li>
-            <li id="azucares" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              De los cuales azúcares: 0.0
-            </li>
-            <li id="proteinas" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              Proteínas: 0.0
-            </li>
-            <li id="fibras" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              Fibras: 0.0
-            </li>
-            <li id="sal" class="d-flex align-items-center mb-2">
-              <div class="me-2"></div>
-              Sal: 0.0
-            </li>
-          </div>
-        </article>
-        <canvas id="myChart" style="width: 100%; max-width: 600px">que</canvas>
+        <div class="row">
+          <article class="">
+            <div id="nutrientes">
+              <li id="grasas" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                <span>Grasas: 0.0</span>
+              </li>
+              <li id="saturadas" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                De las cuales saturadas: 0.0
+              </li>
+              <li id="carbohidratos" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                Carbohidratos: 0.0
+              </li>
+              <li id="azucares" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                De los cuales azúcares: 0.0
+              </li>
+              <li id="proteinas" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                Proteínas: 0.0
+              </li>
+              <li id="fibras" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                Fibras: 0.0
+              </li>
+              <li id="sal" class="d-flex align-items-center mb-2">
+                <div class="me-2"></div>
+                Sal: 0.0
+              </li>
+            </div>
+          </article>
+          <article class="d-flex justify-content-center">
+            <canvas id="myChart" style="width: 100%; max-width: 600px"
+              >que</canvas
+            >
+          </article>
+        </div>
+
         <!-- botones de guardar o eliminar -->
         <article class="d-flex justify-content-between"></article>
       </section>

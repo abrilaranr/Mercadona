@@ -1,115 +1,110 @@
 [
     {
         "id_recipe": 1,
-        "name_recipe": "Pizza",
+        "name_recipe": "Lentejas salteadas con verduras",
         "id_recipe_category": 1,
         "price_recipe": 1.3,
         "kcal_recipe": 1233 ,
         "ingredients": [
-            {"id_ingredient": 2, "quantity": 600},
-            {"id_ingredient": 22, "quantity": 400},
-            {"id_ingredient": 24, "quantity": 200},
-            {"id_ingredient": 98, "quantity": 10},
-            {"id_ingredient": 112, "quantity": 20}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 83, "quantity": 500},
+            {"id_ingredient": 188, "quantity": 50},
+            {"id_ingredient": 192, "quantity": 180}
         ]
     },
     {
         "id_recipe": 2,
-        "name_recipe": "Bizcocho",
+        "name_recipe": "Quinoa con pescado",
         "id_recipe_category": 4,
-        "price_recipe": 2.35,
-        "kcal_recipe": 2232,
+        "price_recipe": 2.89,
+        "kcal_recipe": 966,
         "ingredients": [
-            {"id_ingredient": 2, "quantity": 250},
-            {"id_ingredient": 2, "quantity": 220},
-            {"id_ingredient": 2, "quantity": 600}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 74, "quantity": 150},
+            {"id_ingredient": 188, "quantity": 50},
+            {"id_ingredient": 192, "quantity": 180},
+            {"id_ingredient": 134, "quantity": 100},
+            {"id_ingredient": 193, "quantity": 100}
         ]
     },
     {
         "id_recipe": 3,
-        "name_recipe": "Ensalada césar",
+        "name_recipe": "Preparado de soja para acompañar",
         "id_recipe_category": 3,
-        "price_recipe": 0.95,
-        "kcal_recipe": 722,
+        "price_recipe": 3.53,
+        "kcal_recipe": 1343,
         "ingredients": [
-            {"id_ingredient": 184, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 82, "quantity": 250},
+            {"id_ingredient": 188, "quantity": 50},
+            {"id_ingredient": 192, "quantity": 180},
+            {"id_ingredient": 193, "quantity": 180},
+            {"id_ingredient": 196, "quantity": 190},
+            {"id_ingredient": 58, "quantity": 80}
         ]
     },
     {
         "id_recipe": 4,
-        "name_recipe": "Wok de ternera",
+        "name_recipe": "Gnocchi fresco con salsa de aguacate",
         "id_recipe_category": 1,
-        "price_recipe": 1.83,
-        "kcal_recipe": 1733 ,
+        "price_recipe": 3.71,
+        "kcal_recipe": 2784 ,
         "ingredients": [
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 101, "quantity": 500},
+            {"id_ingredient": 173, "quantity": 2},
+            {"id_ingredient": 159, "quantity": 150}
         ]
     },
     {
         "id_recipe": 5,
-        "name_recipe": "Arróz tres delicias",
+        "name_recipe": "Lomo de bacalao con huevo cocido",
         "id_recipe_category": 6,
-        "price_recipe": 1.35,
-        "kcal_recipe": 1193,
+        "price_recipe": 6.24,
+        "kcal_recipe": 344,
         "ingredients": [
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 143, "quantity": 390},
+            {"id_ingredient": 146, "quantity": 1},
+            {"id_ingredient": 9, "quantity": 10}
         ]
     },
     {
         "id_recipe": 6,
-        "name_recipe": "Ensaladilla rusa",
+        "name_recipe": "Filete de salmón al horno",
         "id_recipe_category": 5,
-        "price_recipe": 0.65,
-        "kcal_recipe": 922,
+        "price_recipe": 3.44,
+        "kcal_recipe": 601,
         "ingredients": [
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200},
-            {"id_ingredient": 2, "quantity": 200}
+            {"id_ingredient": 1, "quantity": 10},
+            {"id_ingredient": 142, "quantity": 300},
+            {"id_ingredient": 15, "quantity": 25},
+            {"id_ingredient": 9, "quantity": 20}
         ]
     },
     {
         "id_recipe": 7,
-        "name_recipe": "Macarrones con salsa",
+        "name_recipe": "Hummus",
         "id_recipe_category": 2,
-        "price_recipe": 0.65,
-        "kcal_recipe": 922,
+        "price_recipe": 1.60,
+        "kcal_recipe": 639,
         "ingredients": [
-            {"id_ingredient": 93, "quantity": 125},
-            {"id_ingredient": 162, "quantity": 35},
-            {"id_ingredient": 47, "quantity": 100},
-            {"id_ingredient": 14, "quantity": 2}
+            {"id_ingredient": 1, "quantity": 30},
+            {"id_ingredient": 76, "quantity": 400},
+            {"id_ingredient": 62, "quantity": 50}
         ]
     },
     {
         "id_recipe": 8,
-        "name_recipe": "Macarrones con salsa",
+        "name_recipe": "Merluza al horno con limón",
         "id_recipe_category": 2,
-        "price_recipe": 0.65,
-        "kcal_recipe": 922,
+        "price_recipe": 1.15,
+        "kcal_recipe": 584,
         "ingredients": [
-            {"id_ingredient": 93, "quantity": 125},
-            {"id_ingredient": 162, "quantity": 35},
-            {"id_ingredient": 47, "quantity": 100},
-            {"id_ingredient": 14, "quantity": 2}
+            {"id_ingredient": 1, "quantity": 20},
+            {"id_ingredient": 141, "quantity": 450},
+            {"id_ingredient": 17, "quantity": 20},
+            {"id_ingredient": 188, "quantity": 100}
         ]
     }
 ]

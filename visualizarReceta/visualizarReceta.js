@@ -23,7 +23,7 @@ async function fetchMoviesJSON() {
     console.log(jsonResponse)
 }
 fetchMoviesJSON().then(json => {
-    recipes = json;
+    recipes = JSON.parse(localStorage.getItem('recipes'));
     loadRecipe(json)
     // console.log(recipes)
 });
@@ -70,8 +70,8 @@ function loadRecipe(data) {
 
     let recipe = findRecipeById(recipeId);
     let categoria = getCategoryById(recipe['id_recipe_category']);
-    document.getElementById('nombre').innerHTML = 'Nombre de receta: ' + recipe['name_recipe']
-    document.getElementById('categoria').innerHTML = 'Categoría de la receta: ' + categoria
+    document.getElementById('nombre').innerHTML = recipe['name_recipe']
+    document.getElementById('categoria').innerHTML = 'Categoría: ' + categoria
 
 
     for (let i = 0; i < JSON.stringify(recipe['ingredients'].length); i++) {
@@ -87,14 +87,28 @@ function loadRecipe(data) {
         </div>
         </td>
 
-        <td class="quantity">` + parseInt(recipe['ingredients'][i]['quantity']) + `</td>
-        <td>`+ parseInt(recipe['ingredients'][i]['quantity'] * ingredient['kcal'] / 100) + `</td>
+        <td>
+        <span class="quantity">
+            ` + parseInt(recipe['ingredients'][i]['quantity']) + `
+        </span>
+        <span>
+       ` + findIngredientById(recipe['ingredients'][i]['id_ingredient'])['medicion'] + `
+        </span>
+        
+        
+        </td>
+        <td>
+        `+ parseInt(recipe['ingredients'][i]['quantity'] * ingredient['kcal'] / 100) + `
+        </td>
     </tr>
 
 
     `;
 
     }
+
+    // <td class="quantity">` + parseInt(recipe['ingredients'][i]['quantity']) + findIngredientById(recipe['ingredients'][i]['id_ingredient'])['medicion'] + `</td>
+    // findIngredientById(recipe['ingredients'][i]['id_ingredient'])['medicion']
 
     // Encontrer receta por id debe estar dentro de la funcion para utilizarla
     function findIngredientById(ingredientId) {
@@ -150,7 +164,7 @@ function actualizar() {
     let ingredientsRows = document.querySelectorAll('tr[data-ingredient-id]');
 
     // Meto en una variable cada cantidad de cada ingrediente dentro de la tabla de ingredientes
-    let ingredientsQuantity = document.querySelectorAll('tr[data-ingredient-id] > .quantity');
+    let ingredientsQuantity = document.querySelectorAll('tr[data-ingredient-id] > td > .quantity');
 
 
     // Recorro row por row y voy consultando los datos nutricionales y las voy sumando en un total para luego imprimirlas

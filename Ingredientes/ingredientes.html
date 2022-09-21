@@ -43,11 +43,11 @@
         <div class="input">
           <label for="category">Ordenar por</label>
           <br />
-          <select name="category" id="category">
-            <option value="precio_menor_a_mayor">menor a mayor precio</option>
-            <option value="precio_mayor_a_menor">mayor a menor precio</option>
-            <option value="kcal_menor_a_mayor">menor a mayor precio</option>
-            <option value="kcal_mayor_a_menor">mayor a menor precio</option>
+          <select name="category" id="category" oninput="actualizar()">
+            <option value="1">menor a mayor precio</option>
+            <option value="2">mayor a menor precio</option>
+            <option value="3">menor a mayor precio</option>
+            <option value="4">mayor a menor precio</option>
           </select>
         </div>
 
@@ -56,121 +56,132 @@
           <label for="">Categorías</label>
           <br />
           <ul class="list-group" aria-label="type_recipe">
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="reposteria"
+                value="1"
+                id="aceites_especias_y_salsas"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="reposteria"
+              <label class="form-check-label" for="aceites_especias_y_salsas"
                 >Aceites, especias y salsas</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="carnes"
+                value="2"
+                id="aperitivos"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="carnes">Aperitivos</label>
+              <label class="form-check-label" for="aperitivos"
+                >Aperitivos</label
+              >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="ensaladas"
+                value="3"
+                id="arroz_legumbres_y_pasta"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="thirdCheckbox"
+              <label class="form-check-label" for="arroz_legumbres_y_pasta"
                 >Arroz, legumbres y pasta</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pescados"
+                value="4"
+                id="panaderia"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >Panaderia</label
-              >
+              <label class="form-check-label" for="panaderia">Panadería</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="sopas_y_cremas"
+                value="5"
+                id="marisco_y_pescado"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="marisco_y_pescado"
                 >Marisco y pescado</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="salsas"
+                value="6"
+                id="huevos_y_lacteos"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="huevos_y_lacteos"
                 >Huevos y lacteos</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pasta"
+                value="7"
+                id="fruta_y_verdura"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="fruta_y_verdura"
                 >Fruta y verdura</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pasta"
+                value="8"
+                id="carne"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox">Carne</label>
+              <label class="form-check-label" for="carne">Carne</label>
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pasta"
+                value="9"
+                id="cereales_y_galletas"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="cereales_y_galletas"
                 >Cereales y galletas</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pasta"
+                value="10"
+                id="conservas_caldos_y_cremas"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="conservas_caldos_y_cremas"
                 >Conservas, caldos y cremas</label
               >
             </li>
-            <li class="list-group-item">
+            <li class="mb-3">
               <input
                 class="form-check-input me-1"
                 type="checkbox"
-                value=""
-                id="pasta"
+                value="11"
+                id="charcuteria_y_quesos"
+                onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >charcuteria y quesos</label
+              <label class="form-check-label" for="charcuteria_y_quesos"
+                >Charcuteria y quesos</label
               >
             </li>
           </ul>
@@ -178,24 +189,26 @@
         <div class="input">
           <label class=""> Precio </label>
           <div class="row g-2">
-            <div class="col-min">
-              <div class="form-floating">
+            <div class="d-flex justify-content-between">
+              <div class="form-floating me-2">
                 <input
-                  type="minPrice"
+                  type="number"
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
-                  value="0"
+                  value=""
+                  oninput="actualizar()"
                 />
                 <label for="minPrice">Min</label>
               </div>
-              <div class="form-floating">
+              <div class="form-floating ms-2">
                 <input
-                  type="maxPrice"
+                  type="number"
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="10"
+                  value=""
+                  oninput="actualizar()"
                 />
                 <label for="maxPrice">Max</label>
               </div>
@@ -203,25 +216,16 @@
           </div>
           <div class="col-min"></div>
           <div class="input">
+            <div class="input"></div>
             <div class="input">
-              <button
-                type="button"
-                class="btn"
-                id="pricesButton"
-                onclick="pricesBetweenIngredients()"
-              >
-                Validar filtro
-              </button>
-            </div>
-            <div class="input">
-              <button
+              <!-- <button
                 type="button"
                 class="btn"
                 id="showall"
                 onclick="loadIngredientsPrices()"
               >
                 Mostrar todas las recetas
-              </button>
+              </button> -->
             </div>
           </div>
           <div class="col-min"></div>
@@ -232,11 +236,11 @@
 
       <section class="d-flex flex-column justify-content-start">
         <h2>
-          <span id="totalIngedients" class="text-success fw-bold">99</span>
+          <span id="totalIngedients" class="text-success fw-bold">---</span>
           Ingredientes disponibles
         </h2>
 
-        <div class="input">
+        <!-- <div class="input">
           <label for="">Busqueda</label>
           <br />
           <div></div>
@@ -247,9 +251,9 @@
               >agrega uno personalizado aquí.</a
             >
           </p>
-        </div>
+        </div> -->
 
-        <div class="container text-center">
+        <div class="container text-center mt-4">
           <div class="d-flex justify-content-center col-12">
             <table class="table table-ingredients">
               <thead>
