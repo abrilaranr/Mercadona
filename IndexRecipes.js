@@ -45,9 +45,9 @@ function loadRecipes() {
 }
 
 
-function sortRecipes(value) {
-    // parseInt(value)
-    switch (value) {
+function sortRecipes() {
+    let orderValue = document.querySelector('aside select').value
+    switch (orderValue) {
         case '1':
             precioDescendente()
             break;
@@ -73,7 +73,7 @@ function sortRecipes(value) {
 function precioAscendente() {
     let myArray = [];
     let sorted =
-        recipes.sort(function (b, a) {
+        filteredRecipe.sort(function (b, a) {
             if (a.price_recipe > b.price_recipe) {
                 return 1;
             }
@@ -88,8 +88,7 @@ function precioAscendente() {
         myArray.push(sorted[i]['id_recipe'])
     }
 
-    // alert(JSON.stringify(sorted))
-    loadRecipes(sorted)
+    filteredRecipe = sorted
 
 
 }
@@ -99,7 +98,7 @@ function precioDescendente() {
 
     let myArray = [];
     let sorted =
-        recipes.sort(function (b, a) {
+        filteredRecipe.sort(function (b, a) {
             if (a.price_recipe < b.price_recipe) {
                 return 1;
             }
@@ -114,8 +113,7 @@ function precioDescendente() {
         myArray.push(sorted[i]['id_recipe'])
     }
 
-    // alert(JSON.stringify(sorted))
-    loadRecipes(sorted)
+    filteredRecipe = sorted
 
 
 }
@@ -125,7 +123,7 @@ function kcalAscendente() {
 
     let myArray = [];
     let sorted =
-        recipes.sort(function (b, a) {
+        filteredRecipe.sort(function (b, a) {
             if (a.kcal_recipe > b.kcal_recipe) {
                 return 1;
             }
@@ -140,8 +138,7 @@ function kcalAscendente() {
         myArray.push(sorted[i]['id_recipe'])
     }
 
-    // alert(JSON.stringify(sorted))
-    loadRecipes(sorted)
+    filteredRecipe = sorted
 
 
 }
@@ -151,7 +148,7 @@ function kcalDescendente() {
 
     let myArray = [];
     let sorted =
-        recipes.sort(function (a, b) {
+        filteredRecipe.sort(function (a, b) {
             if (a.kcal_recipe < b.kcal_recipe) {
                 return 1;
             }
@@ -166,8 +163,8 @@ function kcalDescendente() {
         myArray.push(sorted[i]['id_recipe'])
     }
 
-    // alert(JSON.stringify(sorted))
-    loadRecipes(sorted)
+
+    filteredRecipe = sorted
 
 
 }
@@ -178,40 +175,49 @@ function pricesBetween() {
     let maxPrice = document.getElementById('maxPrice').value;
     let sorted = filteredRecipe;
     let myArray = [];
-    for (const sortedElement of sorted) {
-        if (sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice) {
-            myArray.push(sortedElement);
-            console.log(sortedElement);
+
+    if (minPrice >= maxPrice) {
+        filteredRecipe = filteredRecipe;
+    } else {
+        for (const sortedElement of sorted) {
+            if (sortedElement.price_recipe >= minPrice && sortedElement.price_recipe <= maxPrice) {
+                myArray.push(sortedElement);
+            }
         }
+        filteredRecipe = myArray;
     }
-    console.log(myArray);
-    sorted = myArray;
-    console.log(sorted);
-    loadRecipesPrices(sorted);
+
 }
 
 // FUNCTION FOR LOAD RECIPES FOR PRICES
 function loadRecipesPrices(sorted) {
     // alert(jsondata)
     let out = document.getElementById('recipesOut');
-
     out.innerHTML = '';
 
-    for (const sortedElement of sorted) {
-        out.innerHTML += `
-            <div class="card m-3">
-            <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ sortedElement.id_recipe + `">
-                <img class="card-img" />
-                <div class="card-body"> 
-                    <p class="card-text">`+ sortedElement.name_recipe + `</p>
-                    <div class="d-flex justify-content-between">
-                    <p class="card-text">`+ sortedElement.kcal_recipe + ` kcal</p>
-                    <p class="card-text">`+ sortedElement.price_recipe + ` €</p>
+    if (sorted.length == 0) {
+        out.innerHTML = 'No se encontraron resultados';
+
+    } else {
+
+        for (const sortedElement of sorted) {
+            out.innerHTML += `
+                <div class="card m-3">
+                <a href="/visualizarReceta/visualizarReceta.html?recipeId=`+ sortedElement.id_recipe + `">
+                    <img class="card-img" />
+                    <div class="card-body"> 
+                        <p class="card-text">`+ sortedElement.name_recipe + `</p>
+                        <div class="d-flex justify-content-between">
+                        <p class="card-text">`+ sortedElement.kcal_recipe + ` kcal</p>
+                        <p class="card-text">`+ sortedElement.price_recipe + ` €</p>
+                        </div>
                     </div>
-                </div>
-                </a>
-            </div>`;
+                    </a>
+                </div>`;
+        }
     }
+
+
 }
 
 
@@ -220,24 +226,19 @@ function filterByCategory() {
     let filtered = [];
     let out = document.getElementById('recipesOut');
     out.innerHTML = '';
-    for (let i = 0; i < cehcked.length; i++) {
-        for (let j = 0; j < recipes.length; j++) {
-            if (cehcked[i].value == recipes[j]['id_recipe_category']) {
-                filtered.push(recipes[j])
+
+    if (cehcked.length == 0) {
+        filteredRecipe = recipes;
+    } else {
+        for (let i = 0; i < cehcked.length; i++) {
+            for (let j = 0; j < recipes.length; j++) {
+                if (cehcked[i].value == recipes[j]['id_recipe_category']) {
+                    filtered.push(recipes[j])
+                }
             }
         }
+        filteredRecipe = filtered;
     }
-
-
-
-
-    filteredRecipe = filtered;
-    alert(filteredRecipe)
-
-
-
-
-
 
 }
 
@@ -247,8 +248,9 @@ function filterByCategory() {
 
 
 function actualizar() {
+    filteredRecipe = recipes
     filterByCategory()
     pricesBetween()
-    // sortRecipes(value)
+    sortRecipes()
     loadRecipesPrices(filteredRecipe)
 }

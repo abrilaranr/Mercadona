@@ -43,11 +43,7 @@
         <div class="input">
           <label for="category">Ordenar por</label>
           <br />
-          <select
-            name="category"
-            id="category"
-            oninput="sortRecipes(this.value) "
-          >
+          <select name="category" id="category" oninput="actualizar()">
             <option value="0" selected>Ninguno</option>
             <option value="1">menor a mayor precio</option>
             <option value="2">mayor a menor precio</option>
@@ -96,9 +92,7 @@
                 id="ensaladas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="thirdCheckbox"
-                >Ensaladas</label
-              >
+              <label class="form-check-label" for="ensaladas">Ensaladas</label>
             </li>
             <li class="list-group-item">
               <input
@@ -109,9 +103,7 @@
                 id="pescados"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >Pescados</label
-              >
+              <label class="form-check-label" for="pescados">Pescados</label>
             </li>
             <li class="list-group-item">
               <input
@@ -122,7 +114,7 @@
                 id="sopas_y_cremas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
+              <label class="form-check-label" for="sopas_y_cremas"
                 >Sopas y Cremas</label
               >
             </li>
@@ -135,9 +127,7 @@
                 id="salsas"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox"
-                >Salsas</label
-              >
+              <label class="form-check-label" for="salsas">Salsas</label>
             </li>
             <li class="list-group-item">
               <input
@@ -148,7 +138,7 @@
                 id="pasta"
                 onclick="actualizar()"
               />
-              <label class="form-check-label" for="secondCheckbox">Pasta</label>
+              <label class="form-check-label" for="pasta">Pasta</label>
             </li>
           </ul>
         </div>
@@ -162,7 +152,7 @@
                   class="form-control"
                   id="minPrice"
                   placeholder="min"
-                  value="0"
+                  value=""
                   oninput="actualizar()"
                 />
                 <label for="minPrice">Min</label>
@@ -173,7 +163,7 @@
                   class="form-control"
                   id="maxPrice"
                   placeholder="max"
-                  value="0"
+                  value=""
                   oninput="actualizar()"
                 />
                 <label for="maxPrice">Max</label>
