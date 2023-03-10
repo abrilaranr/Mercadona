@@ -143,7 +143,7 @@
           </ul>
         </div>
         <div class="input">
-          <label class=""> Precio </label>
+          <label class="">Rango de Precio</label>
           <div class="row g-2">
             <div class="d-flex justify-content-between">
               <div class="form-floating me-2">
@@ -170,18 +170,16 @@
               </div>
             </div>
           </div>
-          <div class="col-min"></div>
-          <div class="input">
-            <!-- <button
-              type="button"
-              class="btn"
-              id="showall"
-              onclick="loadRecipes()"
-            >
-              Mostrar todas las recetas
-            </button> -->
+          <div class="row m-1 mt-4">
+            <button class="btn" onclick="exportar()">
+              <img src="Icons\file-download-line.svg" /> Exportar recetas
+            </button>
           </div>
-          <div class="col-min"></div>
+          <div class="row m-1 mt-4">
+            <button class="btn" onclick="exportar()">
+              <img src="Icons\file-upload-line.svg" /> Importar recetas
+            </button>
+          </div>
         </div>
       </aside>
 

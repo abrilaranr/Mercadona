@@ -1,4 +1,3 @@
-
 const url = "recipes.json";
 let filteredRecipe
 let recipes;
@@ -114,10 +113,6 @@ function precioAscendente() {
             return 0;
         });
 
-    for (let i = 0; i < sorted.length; i++) {
-        myArray.push(sorted[i]['id_recipe'])
-    }
-
     filteredRecipe = sorted
 
 
@@ -126,7 +121,6 @@ function precioAscendente() {
 
 function precioDescendente() {
 
-    let myArray = [];
     let sorted =
         filteredRecipe.sort(function (b, a) {
             if (a.price_recipe < b.price_recipe) {
@@ -138,10 +132,6 @@ function precioDescendente() {
             // a must be equal to b
             return 0;
         });
-
-    for (let i = 0; i < sorted.length; i++) {
-        myArray.push(sorted[i]['id_recipe'])
-    }
 
     filteredRecipe = sorted
 

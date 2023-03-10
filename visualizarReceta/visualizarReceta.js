@@ -45,6 +45,19 @@ function findIngredientById(ingredientId) {
     }
 }
 
+function deleteRecipe() {
+    let thisId = Number(urlParams.get('recipeId'));
+    let recipes = JSON.parse(localStorage.getItem('recipes'));
+
+    let confirmDelete = confirm("¿Estás seguro que deseas eliminar esta receta?");
+
+    if (confirmDelete) {
+        recipes = recipes.filter(recipe => recipe.id_recipe !== thisId);
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+        window.location.href = "../index.html";
+    }
+}
+
 
 // TENGO QUE CAMBIAR ESTO A CATEGORIAS DE RECETAS
 
@@ -124,23 +137,6 @@ function loadRecipe(data) {
     // alert(JSON.stringify(ingredients[0]))
 
     actualizar()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -264,6 +260,3 @@ function actualizarGrafico(totalGrasas, totalSaturadas, totalCarbohidratos, tota
         }
     });
 }
-
-
-

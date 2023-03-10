@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api/allIngredients";
+const url = "../ingredients.json";
 let jsondata;
 
 fetch(url)
@@ -78,7 +78,10 @@ function findIngredientById(ingredientId) {
 function autocomplete(inp, arr) {
     // crea la array de nombres de items del osrs
 
-    fetch("http://localhost:8080/api/allIngredients")
+    let url = 'http://localhost:8080/api/allIngredients';
+    // let url = '../ingredients.json';
+
+    fetch(url)
         .then((response) => response.json())
         .then((data) => setPrice(data));
 
@@ -206,6 +209,7 @@ function autocomplete(inp, arr) {
     }
 
     function addIngredient(ingredientId) {
+        alert('hola')
         // obtengo el ingrediente del id que el usuario pasó a traves de la función
         // let myId = jsondata[0]['idIngredient'];
         let ingredient = findIngredientById(ingredientId);
@@ -392,14 +396,6 @@ function addIngredient(ingredientId) {
 
 
 
-
-
-
-
-
-
-
-
 function actualizar() {
     let price = document.getElementById("totalPrice");
     let kcal = document.getElementById("totalKcal");
@@ -439,10 +435,7 @@ function actualizar() {
         totalProteinas += parseFloat((ingredientQuantity * ingredient['proteinas'] / 100));
         totalFibras += parseFloat((ingredientQuantity * ingredient['fibra'] / 100));
         totalSal += parseFloat((ingredientQuantity * ingredient['sal'] / 100));
-
         // totalGrasas += parseFloat(((value * ingredientRow["grasas"]) / 100).toFixed(2));
-
-
     }
 
     document.querySelector('#nutrientes').innerHTML = `
@@ -491,15 +484,6 @@ function actualizar() {
     // sal.innerHTML = "Sal: " + totalSal.toFixed(1);
 
     actualizarGrafico(totalGrasas, totalSaturadas, totalCarbohidratos, totalAzucares, totalProteinas, totalFibras, totalSal);
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -590,7 +574,7 @@ function publicar() {
     recipes.push(recetaObjeto);
 
     window.localStorage.setItem("recipes", JSON.stringify(recipes));
-
+    window.location.href = "../index.html";
 
 
 
@@ -651,6 +635,4 @@ function deleteRecipe() {
             </div>
         </div>
     `
-
-
 }

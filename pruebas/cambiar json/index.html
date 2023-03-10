@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="insertar()">Insertar datos</button>
+    <button onclick="descargarJSON()">Exportar</button>
+    <br />
+    <br />
+    <input type="file" id="input-archivo" />
+    <button id="boton-importar">Importar</button>
+
+    <script>
+      const inputArchivo = document.getElementById("input-archivo");
+      const botonImportar = document.getElementById("boton-importar");
+
+      botonImportar.addEventListener("click", () => {
+        const archivo = inputArchivo.files[0];
+        importarJSON(archivo);
+      });
+
+      function importarJSON(file) {
+        const lector = new FileReader();
+
+        // Configurar una función que se ejecute cuando se cargue el archivo
+        lector.onload = (evento) => {
+          const contenido = evento.target.result;
+          const datos = JSON.parse(contenido);
+
+          // Eliminar los datos anteriores del Local Storage
+          localStorage.clear();
+
+          // Almacenar los nuevos datos en el Local Storage
+          for (const [clave, valor] of Object.entries(datos)) {
+            localStorage.setItem(clave, valor);
+          }
+        };
+
+        // Leer el contenido del archivo como texto
+        lector.readAsText(file);
+      }
+    </script>
+  </body>
+  <script type="text/javascript" src="prueba.js"></script>
+</html>

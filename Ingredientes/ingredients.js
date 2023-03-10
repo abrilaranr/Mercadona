@@ -1,4 +1,5 @@
-const url = "http://localhost:8080/api/allIngredients";
+// const url = "http://localhost:8080/api/allIngredients";
+const url = "../ingredients.json";
 let ingredients;
 let filteredIngredients;
 
@@ -56,16 +57,6 @@ function printIngredients(jsondata) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 function sortIngredients() {
     let orderValue = document.querySelector('aside select').value
 
@@ -73,22 +64,16 @@ function sortIngredients() {
         case '1':
             precioDescendente()
             break;
-
         case '2':
             precioAscendente()
             break;
-
         case '3':
             precioPesoAscendente();
             break;
-
         case '4':
             precioPesoDescendente();
             break;
-
-
     }
-
 }
 
 // (parseFloat(1000 * a.precio / a.peso).toFixed(2))
